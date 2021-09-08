@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memberMapper">
+<insert id="register">
+	INSERT INTO Register(UserId, Password, Name, Birth, Phone, Height, Weight, UserType)
+					VALUES( #{UserId},
+							#{Password},
+							#{Name},
+							#{Birth},
+							#{Phone},
+							#{Height},
+							#{Weight},
+							#{UserType})
+</insert>
+
+<select id="login" resultType="com.andong.jaba.vo.MemberVO">
+	SELECT UserId, Password, UserType
+	FROM Register
+	WHERE UserId = '${UserId}'
+	AND Password = '${Password}'
+</select>
+
+
+<insert id="trainerRegister">
+	INSERT INTO Trainer(UserId, Career, KeyCode)
+			VALUES( #{UserId},
+					#{Career},
+					#{KeyCode})
+</insert>
+<select id="trainerSelect" resultType="com.andong.jaba.vo.TrainerVO">
+	SELECT KeyCode 
+	FROM Trainer
+	WHERE UserId = '${UserId}'
+</select>
+
+
+</mapper>
