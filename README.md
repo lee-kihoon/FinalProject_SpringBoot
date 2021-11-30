@@ -1,13 +1,12 @@
-# FinalProject_ZA.BA (자세를 바르게)
+# FinalProject
 안동대_인공지능과정_최종프로젝트
+
+### 헬스 자세교정 플랫폼
 
 # ZA.BA 
 자바 : 자세를 바르게
  
-### 헬스 자세교정 플랫폼
  
- 
-
 ## 시연 영상 링크
 
 1. 서비스  -  https://youtu.be/G40ThETazsk
