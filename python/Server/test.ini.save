@@ -1,0 +1,10 @@
+module = app
+callable = app
+
+socket = /home/an/dev/python/Server
+chmod-socket = 666
+vecuum = true
+
+daemonize = /home/an/dev/python/uwsgi.log
+
+die-on-term = true

@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+	<title>Login V1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" th:href="@{images/icons/favicon.ico}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/bootstrap/css/bootstrap.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/animate/animate.css}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/css-hamburgers/hamburgers.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/select2/select2.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/main.css}">
+<!--===============================================================================================-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+	<link rel="stylesheet" type="text/css"  th:href="@{css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome/css/font-awesome.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/nivo-lightbox.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/default.css}">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700}" rel="stylesheet">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Montserrat:400,700}" rel="stylesheet">
+
+
+<script>
+/* URL 파라미터 값 추출 */
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " ")); 
+	}
+	
+	function jbSubmit() {
+		var patId = getParameterByName('UserId');
+		document.getElementById("uid").value = patId;
+	}
+	
+</script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- nav 바 -->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="/index2">ZA.BA</a>
+      
+      <div class="phone"><span>Call Today</span>320-123-4321</div>
+    </div>
+  </div>
+</nav>
+
+
+	<!-- 메인화면 -->
+	<div class="limiter">
+		<div class="container-login100">
+			<div style="margin-top:200px; margin-bottom:200px;" class="wrap-login101">
+				<span class="login100-form-title">
+						이력서 / 경력증명서를 업로드 해주세요.
+						
+					</span>
+					<div class="login100-pic js-tilt" data-tilt>
+					<a href="/"><img th:src="@{images/mpg1.gif}" alt="IMG"></a>
+				</div>
+				<!-- <form id="information" class="login100-form validate-form" th:object="${vo}" th:action="@{regist}" method="post"> -->
+				<form class="login100-form" method="post" action="/upload" enctype="multipart/form-data" onsubmit="jbSubmit();">
+				
+				
+				<div class="wrap-input100 validate-input">
+					<label for="formFileDisabled" class="form-label">이력서 / 경력증명서</label>
+					<input class="form-control" id="formFileDisabled"  type="file" name="uploadfile" multiple="multiple">
+				</div>
+				<div style="margin-top:20px; margin-bottom:200px;" class="container-login100-form-btn">
+					<input  type="hidden" id="uid" name="UserId">
+					<input class="login100-form-btn" type="submit">	
+				</div>
+							
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- 	
+				<form class="login100-form validate-form" method="post" action="/upload" enctype="multipart/form-data" onsubmit="jbSubmit();">
+							<input type="hidden" id="uid" name="UserId">
+							<input class="input100" type="file" name="uploadfile" multiple="multiple">
+							<input class="login100-form-btn" type="submit">
+				</form>
+	 -->
+<!--===============================================================================================-->	
+	<script th:src="@{resources/vendor/jquery/jquery-3.2.1.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/bootstrap/js/popper.js}"></script>
+	<script th:src="@{resources/vendor/bootstrap/js/bootstrap.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/select2/select2.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/tilt/tilt.jquery.min.js}"></script>
+	<script th:src="@{resources/js/validation.js}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/js/main.js}"></script>
+
+</body>
+
+</html>

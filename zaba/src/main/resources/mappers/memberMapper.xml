@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="memberMapper">
+
+<insert id="register">
+	INSERT INTO Register(UserId, Password, Name, Birth, Phone, Height, Weight, UserType)
+					VALUES( #{UserId},
+							#{Password},
+							#{Name},
+							#{Birth},
+							#{Phone},
+							#{Height},
+							#{Weight},
+							#{UserType})
+</insert>
+
+<!-- 운동 카운트 정보 입력 -->
+<insert id="CountExerciseReg">
+	INSERT INTO CountExercise(UserName,Squat,Plank,Pushup,Lunge,Situp)VALUES( #{UserId},0,0,0,0,0) 
+</insert>
+
+<select id="login" resultType="com.andong.jaba.vo.MemberVO">
+	SELECT UserId, Password, UserType, Name, Password, Height, Weight
+	FROM Register
+	WHERE UserId = '${UserId}'
+	AND Password = '${Password}'
+</select>
+
+<!-- 트레이너 정보 입력 -->
+<insert id="trainerRegister">
+	INSERT INTO Trainer(TrainerUserId, Career, KeyCode)
+			VALUES( #{TrainerUserId},
+					#{Career},
+					#{KeyCode})
+</insert>
+
+<!-- 트레이너 정보 요청 -->
+<select id="trainerSelect" resultType="com.andong.jaba.vo.TrainerVO">  <!-- 이부분 바꿨어요 오류납니다 지금 -->
+    SELECT TrainerUserId, Career, KeyCode FROM Trainer
+</select>
+
+<!-- 회원가입 아이디 중복 체크 -->
+<select id="idCheck" resultType="int">
+	SELECT COUNT(*) FROM Register WHERE USERID = #{UserId}
+</select>
+
+<!-- 트레이너 아이디 중복 체크 -->
+<select id="trainerCheck" resultType="int">
+	SELECT COUNT(*) FROM Trainer WHERE TRAINERUSERID = #{TrainerUserId}
+</select>
+
+<!-- 회원정보 수정 -->
+<update id="memberUpdate">
+	UPDATE Register SET
+	Password = #{Password},
+	Name = #{Name},
+	Height = #{Height},
+	Weight = #{Weight}
+	WHERE UserId = #{UserId}
+</update>
+
+<!-- 트레이너 정보 수정 -->
+<update id="trainerUpdate">
+	UPDATE Trainer SET
+	Career = #{Career},
+	KeyCode = #{KeyCode}
+	WHERE TrainerUserId = #{TrainerUserId}
+</update>
+
+
+
+<!-- 게시판 -->
+
+<!-- 게시판 글 작성 -->
+<insert id="boardInsert">
+	INSERT INTO MP_BOARD(   TITLE 
+   					      , CONTENT 
+   					      , WRITER
+						  , TDATE  
+						  , ROOMCODE )
+                 VALUES(    #{title}
+                 		  , #{content}
+                 		  , #{writer}
+						  , #{tdate}  
+						  , #{roomcode} )
+</insert>
+
+<!-- 게시판 글 불러오기 -->
+<select id="boardList" resultType="com.andong.jaba.vo.BoardVO">
+		SELECT   BNO
+			   , TITLE
+			   , WRITER
+			   , REGDATE
+			   , TDATE
+			   , CONTENT
+			   , ROOMCODE
+		  FROM MP_BOARD
+		  ORDER BY BNO DESC
+</select>
+
+
+
+<!-- 대시보드 -->
+
+<!-- 대시보드 일일 운동량 불러오기 -->
+<select id="todayCount" parameterType="String" resultType="com.andong.jaba.vo.CountExerciseVO">
+	SELECT * FROM CountExercise WHERE UserName = #{userName}
+</select>
+
+<!-- 대시보드 스쿼트 일일 운동량 불러오기 -->
+<select id="myCount" parameterType="String" resultType="com.andong.jaba.vo.CountExerciseVO">
+	SELECT  count(CASE WHEN squat=1 THEN 1 END) as Squat,
+			count(CASE WHEN plank=1 THEN 1 END) as Plank,
+			count(CASE WHEN pushup=1 THEN 1 END) as Pushup,
+			count(CASE WHEN lunge=1 THEN 1 END) as Lunge,
+			count(CASE WHEN situp=1 THEN 1 END) as Situp
+		 	FROM count_table WHERE user_name = #{userName}
+</select>
+
+<!-- 대시보드 총 멤버 불러오기 -->
+<select id="totalMember" resultType="com.andong.jaba.vo.countVO">
+	SELECT count(*) as registerCount from Register
+</select>
+
+<!-- 대시보드 총 트레이너 불러오기 -->
+<select id="totalTrainer" resultType="com.andong.jaba.vo.countVO">
+	select count(*) as trainerCount from Trainer;
+</select>
+
+
+<!-- 총 운동량 -->
+<select id="totalCount" resultType="com.andong.jaba.vo.CountExerciseVO" >
+	SELECT  count(CASE WHEN squat=1 THEN 1 END) as Squat,
+			count(CASE WHEN plank=1 THEN 1 END) as Plank,
+			count(CASE WHEN pushup=1 THEN 1 END) as Pushup,
+			count(CASE WHEN lunge=1 THEN 1 END) as Lunge,
+			count(CASE WHEN situp=1 THEN 1 END) as Situp
+		 	FROM count_table 
+</select>
+
+<!-- 대시보드 스쿼트 TOP 5 -->
+<select id="topSquat" resultType="com.andong.jaba.vo.CountExerciseVO">
+	SELECT  user_name as UserName, 
+			count(CASE WHEN squat=1 THEN 1 END) as Squat 
+	FROM count_table 
+	GROUP BY user_name 
+	ORDER BY Squat DESC LIMIT 5;
+
+</select>
+
+<!-- 대시보드 날짜별 운동량 조회 -->
+<select id="dateCount" resultType="com.andong.jaba.vo.CountExerciseVO">
+	SELECT  user_name as UserName,
+		  	date as Date,
+		    squat as Squat, 
+			plank as Plank,
+			pushup as Pushup,
+			lunge as Lunge,
+			situp as Situp
+	FROM count_table_bak 
+	WHERE     user_name=#{UserName}  and
+		      date=#{Date}
+
+</select>
+
+
+
+<!-- 관리자 페이지 -->
+
+<!-- 트레이너 인증 대기중인 목록 출력 -->
+<select id="trainerAcceptWait" resultType="com.andong.jaba.vo.MemberVO">
+	SELECT * 
+	FROM Register
+	WHERE UserType = 2
+</select>
+
+<!-- 트레이너 인증 완료 -->
+<update id="trainerAcceptComplete">
+	UPDATE Register
+	SET UserType = 1
+	WHERE UserId = #{UserId}
+</update>
+
+
+
+
+<!-- 회원가입시 트레이너 DB에 저장 -->
+<!-- <insert id="trainerReg"> -->
+<!-- 	INSERT into Trainer(TrainerUserId) -->
+<!-- 	VALUES(#{UserId}); -->
+<!-- </insert>  -->
+
+<!-- 트레이너 경력증명서 입력 -->
+<!-- <update id="trainerCertificate"> -->
+<!-- 	UPDATE Trainer -->
+<!-- 	SET CertificationFile = #{CertificationFile} -->
+<!-- 	WHERE TrainerUserId = #{TrainerUserId} -->
+<!-- </update> -->
+
+
+</mapper>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" th:href="@{images/icons/favicon.ico}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/bootstrap/css/bootstrap.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/animate/animate.css}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/css-hamburgers/hamburgers.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/select2/select2.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/main.css}">
+<!--===============================================================================================-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+	<link rel="stylesheet" type="text/css"  th:href="@{css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome/css/font-awesome.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/nivo-lightbox.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/default.css}">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700}" rel="stylesheet">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Montserrat:400,700}" rel="stylesheet">
+
+
+<style type="text/css">
+#banner_online {
+	position:relative;
+    height: 300x;
+    width: 500px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 7px 1px grey;
+    background-color: white;
+    z-index: 9999;
+	left: 50%;
+	top:7%;
+	transform: translateX(-50%);
+    display: none;
+    position: fixed;
+}
+#banner_online h2 {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+
+
+#banner_online p .second {
+    margin-left: 6px;
+}
+
+.pop_content {
+    font-size: 13px;
+    margin-left: 20px;
+	margin-right: 20px;
+}
+
+#banner_online_how {
+    height: 78px;
+    width: 500px;
+    margin-left: 28px;
+    border: 1px solid #82bf77;
+    margin-top: 22px;
+}
+
+#banner_online_how h3 {
+    font-size: 12px;
+    margin-left: 6px;
+    margin-top: 16px;
+}
+#close_button {
+    float: right;
+    margin-top: -3px;
+}
+#close_button2 {
+    float: right;
+    margin-top: -3px;
+}
+
+.p_bottom {
+    margin-left: 30px;
+}
+#modal {
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: none;
+}
+
+
+</style>
+
+</head>
+<script type="text/javascript">
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	var check=0;
+		function fn_trainerCheck(){						
+			// trainer DB에 데이터가 존재하는지 검사.
+			$.ajax({
+				url : "/trainerCheck", 	// 아래의 data를 이쪽으로 전송
+				type : "post",
+				dataType : "json",
+				data : {"TrainerUserId" : $("#TrainerUserId").val()}, // Trainer 데이터를 전송한다
+				success : function(data){	// 결과값을 받아옴
+					if(data == 1){	 // 정보가 존재해 1을 리턴받아올때
+						alert("이미 정보가 존재합니다.");
+						alert("수정 탭으로 이동합니다.");
+						// Modal 팝업 띄우기	
+        				$("#banner_online").fadeIn();
+        				$("#modal").fadeIn();
+						// 팝업에서 닫기 버튼
+    					$("#close_button").click(function(){
+        					$("#banner_online").fadeOut();
+        					$("#modal").fadeOut();
+    					});
+						// 정보 입력버튼은 숨기고 정보 수정버튼을 보이기
+						document.getElementById("btnTrainer").style.display = "none";
+						document.getElementById("btnTrainerUpdate").style.display = "block";
+						
+					}else if(data == 0){ // 정보가 존재하지 않아 0을 리턴받아올때
+						//$("#openModalPop").attr("value", "Y");
+						check = 1;
+						alert("정보를 입력하세요.");
+
+        				$("#banner_online").fadeIn();
+        				$("#modal").fadeIn();
+
+						$("#close_button").click(function(){
+        					$("#banner_online").fadeOut();
+        					$("#modal").fadeOut();
+    					});
+						document.getElementById("btnTrainer").style.display = "block";
+						document.getElementById("btnTrainerUpdate").style.display = "none";
+
+					}
+				}
+			})
+		}
+
+
+
+window.onload = function(){			
+
+		// 메인 페이지에서 제출 버튼 클릭시
+		document.getElementById('btn').onclick = function(){
+				if(document.getElementById('Password').value.length>12 || document.getElementById('Password').value.length<6){
+					alert("비밀번호는 영문 포함 6~12 자리 입니다.");
+				}else if(document.getElementById('Name').value.length<2){
+					alert("이름은 2자리 이상입니다.");
+				}else if(document.getElementById('Height').value.length < 1){
+					alert("키를 입력해 주세요.");
+				}else if(document.getElementById('Weight').value.length < 1){
+					alert("몸무게를 입력해 주세요.");
+				}
+				else{
+					alert("정보 수정이 완료 되었습니다.");
+					document.getElementById('information').submit();
+				}
+			};
+		// 트레이너 정보 입력 버튼
+		document.getElementById('btnTrainer').onclick = function(){
+			if(document.getElementById('TrainerUserId').value.length < 1){
+				alert("아이디가 입력되지 않았습니다.");
+			}else if(document.getElementById('KeyCode').value.length < 10){
+				alert("먼저 방을 생성해 주세요.");
+			}else if(document.getElementById('Career').value.length < 10){
+				alert("경력을 10자 이상 입력해 주세요.");
+			}else{
+				alert("트레이너 정보 입력을 완료 하였습니다.");
+				// 폼태그를 이런식으로 보낼 수 있었다니..
+				document.trainerInsert.action="/trainerRegist";
+				document.trainerInsert.submit(); 
+			}
+		};
+
+		// 트레이너 정보 수정 버튼
+		document.getElementById('btnTrainerUpdate').onclick = function(){
+			if(document.getElementById('TrainerUserId').value.length < 1){
+				alert("아이디가 입력되지 않았습니다.");
+			}else if(document.getElementById('KeyCode').value.length < 10){
+				alert("먼저 방을 생성해 주세요.");
+			}else if(document.getElementById('Career').value.length < 10){
+				alert("경력을 10자 이상 입력해 주세요.");
+			}else{
+				alert("트레이너 정보 입력을 완료 하였습니다.");
+				
+				document.trainerInsert.action="/trainerUpdate";
+				document.trainerInsert.submit(); 
+				//document.getElementById('information').submit();
+			}
+		};
+
+
+};
+
+// 방 코드 생성
+function httpCode(){
+	var rand_0_100 = Math.floor(Math.random() * 900000)+100000;
+	var httpURL = "https://fit.zaba.website/?room="+rand_0_100;
+	alert(httpURL+ " 으로 생성 되었습니다!");
+	document.getElementById('KeyCode').value = httpURL;
+	
+}
+
+
+
+
+// 숫자만 입력, 몸무게, 키
+$(document).on("keyup", "input[numberOnly]", function() {$(this).val( $(this).val().replace(/[^0-9]/gi,"") );}) 
+
+// 전화번호만 입력
+$(document).on("keyup", "input[telOnly]", function() {$(this).val( $(this).val().replace(/[^0-9-]/gi,"") );})
+
+// 생일만 입력
+$(document).on("keyup", "input[birthOnly]", function() {$(this).val( $(this).val().replace(/[^0-9/]/gi,"") );})
+
+// 특수문자 쉼표를 제외 제한
+$(document).on("keyup", "input[commasOnly]", function() {$(this).val( $(this).val().replace(/[<>(){}[\]\-_=+|\/\\'\;.:\"`~!?@#$%^&*]/gi,"") );})
+
+// 한글 영문 숫자
+$(document).on("keyup", "input[noSpecial]", function() {$(this).val( $(this).val().replace(/[^ㄱ-힣a-zA-Z0-9]/gi,"") );})
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</script>
+
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- nav 바 --> 
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="/index2">ZA.BA</a>
+      
+      <div class="phone"><span>Team</span>054-000-0000</div>
+    </div>
+  </div>
+</nav>
+
+<!-- 트레이너 정보 입력 팝업 --> 
+<div id= "modal"> 
+</div>
+    <div id = "banner_online" class="wrap-login100-popup">
+        <div id="close_button" style ="cursor: pointer;"> 
+            <img src="../static/img/false.png">
+        </div>
+        <h2>트레이너 정보 입력</h2>
+        <div class="pop_content">
+
+			<form id="trainerInsert" name="trainerInsert"  method="post">
+
+
+				<!-- 방 생성하기 버튼 -->
+            	<div style="margin-top:20px;" class="container-login100-form-btn">
+					<input class="login100-form-btn-purple" type="button" id="createCode" value="방 생성하기" onclick="httpCode()">	
+				</div>
+
+				<!-- 아이디 -->
+            	<div style="margin-top:20px;" class="wrap-input100 validate-input">
+					<input style="color: #1263CE;" class="input100" type="text" name="TrainerUserId" id="TrainerUserId" th:value="${session.member.UserId}" readonly>
+					<span class="focus-input100"></span>
+					<span class="symbol-input101">
+						ID :
+					</span>
+				</div>
+
+				<!-- 방 주소 탭 -->
+            	<div style="margin-top:20px;" class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="KeyCode" id="KeyCode" placeholder="생성하기 버튼을 눌러주세요." readonly>
+					<span class="focus-input100"></span>
+					<span class="symbol-input101">
+						주소 :
+					</span>
+				</div>
+
+				<!--경력사항 입력 탭-->
+				<div style="margin-top:20px;" class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="Career" id="Career" placeholder="경력사항을 입력하세요." >
+					<span class="focus-input100"></span>
+					<span class="symbol-input101">
+						경력 :
+					</span>
+				</div>
+
+				<!-- 제출 -->
+				<div style=" margin-bottom:10px;" class="container-login100-form-btn">
+					<input class="login100-form-btn" type="button" id="btnTrainer" value="정보 입력 완료">
+				</div>
+				
+				<div style="margin-bottom:10px;" class="container-login100-form-btn">
+					<input class="login100-form-btn" type="button" id="btnTrainerUpdate" value="정보 수정 완료">
+				</div>
+
+
+			</form>
+            <a style= "float: right; margin-right: 13px;" href="http://naver.com" target="_blank" >주소 테스트</a>
+			
+        </div>
+    </div>
+
+
+
+<!-- 트레이너 정보 수정 팝업  
+<div id= "modal2"> 
+</div>
+    <div id = "banner_online2" class="wrap-login100-popup">
+        <div id="close_button2" style ="cursor: pointer;"> 
+            <img src="../static/img/false.png">
+        </div>
+        <h2>트레이너 정보 수정</h2>
+        <div class="pop_content">
+			<form id="trainerUpdate" th:action="@{trainerUpdate}" method="post">
+				 방 생성하기 탭 
+            	<div style="margin-top:20px;" class="container-login100-form-btn">
+					<input class="login100-form-btn-purple" type="button" id="createCode" value="방 생성하기" onclick="httpCode()">	
+				</div>
+
+				 아이디 탭 
+				<div style="margin-top:20px;" class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="TrainerUserId" id="TrainerUserId" th:value="${session.member.UserId}" readonly>
+					<span class="focus-input100"></span>
+				</div>
+
+				 방 주소 탭 
+            	<div style="margin-top:20px;" class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="KeyCode" id="KeyCode" placeholder="생성하기 버튼을 눌러주세요." readonly>
+					<span class="focus-input100"></span>
+				</div>
+
+				경력사항 입력 탭
+				<div style="margin-top:20px;" class="wrap-input100 validate-input">
+					<input class="input100" type="text" name="Carrer" id="Carrer" placeholder="경력사항을 입력하세요." >
+					<span class="focus-input100"></span>
+				</div>
+
+				 제출 
+				<div style="margin-top:180px; margin-bottom:10px;" class="container-login100-form-btn">
+					<input class="login100-form-btn" type="button" id="btnTrainerUpdate" value="트레이너 정보 수정">
+				</div>
+            	<br>
+				<br>
+            	<a style= "float: right; margin-right: 13px;" href="http://naver.com" target="_blank" >바로이동</a>
+			</form>
+        </div>
+    </div>-->
+
+	<!-- 주된 메인화면 --> 
+	<div class="limiter">
+		<div class="container-login100">
+			<div style="margin-top:200px; ">
+				<span class="login100-form-title-white">
+						<!--<span th:text="${session.member.UserId}"/> 님 반갑습니다.-->
+						<span th:text="${session.member.Name}"/> 님 반갑습니다.
+				</span>
+
+				<form id="information" th:action="@{memberUpdate}" method="post">
+
+					<!--트레이너일 경우에-->
+					<li th:if="${session.member.UserType == 1}">
+						<div style="margin-top:20px;" class="container-login100-form-btn">
+							<input class="login100-form-btn-purple" type="button"  id="openModalPop" value="트레이너 정보 입력" onclick="fn_trainerCheck();">
+						</div>
+					</li>
+
+					<!-- 아이디 탭 -->
+					<div style="margin-top:20px;" class="wrap-input100 validate-input">
+						<input style="color: #1263CE;" class="input100" type="text" name="UserId" id="UserId" th:value="${session.member.UserId}" readonly>
+						<span class="symbol-input101">
+						ID :
+						</span>
+					</div>
+					<!-- 비밀번호 탭 -->
+					<div style="margin-top:20px;" class="wrap-input100 validate-input">
+						<input class="input100" type="password" name="Password" id="Password" placeholder="비밀번호를 입력하세요." noSpecial>
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						PW :
+						</span>
+					</div>
+					
+					<!-- 이름 탭 -->
+					<div style="margin-top:20px;" class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="Name" id="Name" placeholder="이름을 입력하세요." noSpecial>
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						이름 :
+						</span>
+					</div>
+					
+
+					<!-- 키 탭 -->
+					<div style="margin-top:20px;" class="wrap-input100 validate-input">
+						<input class="input100" type="number" name="Height" id="Height" placeholder="키를 입력하세요." oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')">
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						키 :
+						</span>
+					</div>
+					
+					<!-- 몸무게 탭 -->
+					<div style="margin-top:20px;" class="wrap-input100 validate-input">
+						<input class="input100" type="number" name="Weight" id="Weight" placeholder="체중을 입력하세요." oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						체중 :
+						</span>
+					</div>
+				
+					<!-- 제출 -->
+					<div style="margin-top:20px; margin-bottom:200px;" class="container-login100-form-btn">
+						<input class="login100-form-btn" type="button" id="btn" value="회원정보 수정">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->	
+	<script th:src="@{resources/vendor/jquery/jquery-3.2.1.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/bootstrap/js/popper.js}"></script>
+	<script th:src="@{resources/vendor/bootstrap/js/bootstrap.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/select2/select2.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/tilt/tilt.jquery.min.js}"></script>
+	<script th:src="@{resources/js/validation.js}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/js/main.js}"></script>
+
+</body>
+</html>

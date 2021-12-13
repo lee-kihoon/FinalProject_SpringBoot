@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZA.BA</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" th:href="@{img/favicon.ico}" type="image/x-icon">
+<link rel="apple-touch-icon" th:href="@{img/apple-touch-icon.png}">
+<link rel="apple-touch-icon" sizes="72x72" th:href="@{img/apple-touch-icon-72x72.png}">
+<link rel="apple-touch-icon" sizes="114x114" th:href="@{img/apple-touch-icon-114x114.png}">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  th:href="@{css/bootstrap.css}">
+<link rel="stylesheet" type="text/css"  th:href="@{css/bootstrap2.min.css}">
+<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome/css/font-awesome.css}">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/nivo-lightbox.css}">
+<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/default.css}">
+<link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700}" rel="stylesheet">
+<link th:href="@{https://fonts.googleapis.com/css?family=Montserrat:400,700}" rel="stylesheet">
+
+<!-- stylesheet -->
+<link rel="stylesheet" th:href="@{dateBoard/css/font-awesome.min.css}">
+<link rel="stylesheet" th:href="@{dateBoard/css/owl.carousel.css}">
+<link rel="stylesheet" th:href="@{dateBoard/css/owl.theme.min.css}">
+<link rel="stylesheet" th:href="@{dateBoard/css/animate.css}">
+<link rel="stylesheet" th:href="@{dateBoard/css/main.css}">
+
+<!-- google font -->
+<link href='http://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Rouge+Script" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Milonga' rel='stylesheet' type='text/css'>
+
+    
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="#page-top">ZA.BA</a>
+      
+      <div class="phone"><span>Team</span>054-000-0000</div>
+    </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about" class="page-scroll">자바란?</a></li>
+        <li><a href="#services" class="page-scroll">제공 서비스</a></li>
+        <li><a href="#portfolio" class="page-scroll">시작</a></li>
+         <li><a href="#services2" class="page-scroll">대시보드</a></li>
+        <!--<li><a href="#testimonials" class="page-scroll">1</a></li>-->
+        
+        
+        <li th:if="${session.member != null}"><a th:href="@{/memberUpdateView}" >내정보수정</a></li>
+        <li th:if="${session.member != null}"><a th:href="@{/logout}">로그아웃</a></li>
+		    <li th:if="${session.member == null}"><a th:href="@{/}">로그인</a></li>
+        <li><a href="#contact" class="page-scroll">고객센터</a></li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+</nav>
+<!-- Header -->
+<header id="header">
+  <div class="intro">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 intro-text">
+            <h1>자세를<br>
+               바르게<br><br></h1>
+            <p>홈 트레이닝 플렛폼 자바</p><br><br><br>
+            <!--<a href="#about" class="btn btn-custom btn-lg page-scroll">Learn More</a> </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br>
+</header>
+
+
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6"> <img th:src="@{img/about.jpg}" class="img-responsive" alt=""> </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="about-text">
+          <h2>자바</h2>
+          <p>자바는 비대면 홈트레이닝을 위한 서비스를 제공합니다. 트레이너의 빠른 피드백을 위해 인공지능을 제공하며 사용자의 운동 상태를 파악할 수 있는 대시보드를 제공합니다. 자바에서는 현재 5가지의 맨몸 운동 모델 인공지능을 제공합니다. 인공지능 모델로 트레이너와의 빠른 피드백을 받아보고 자세를 교정해 보세요!</p>
+          <h3>자바 특징</h3>
+          <div class="list-style">
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+              <ul>
+                <li>트레이너의 빠른 피드백</li>
+                <li>트레이너와 실시간 교류</li>
+
+              </ul>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-12">
+              <ul>
+
+                <li>다양한 운동환경 제공</li>
+                <li>인공지능 모델 사용가능</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            
+
+
+<!-- Services Section -->
+<div id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>제공 서비스</h2>
+      <h3>자바에서 지원하는 인공지능 운동 서비스를 소개합니다.</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-media"> <img th:src="@{img/services/squat2f.jpg}" alt=" "> </div>
+        <div class="service-desc">
+          <h3>스쿼트</h3>
+          <p>정면, 측면 스쿼트 인공지능을 제공합니다.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-media"> <img th:src="@{img/services/lunge2f.jpg}" alt=" "> </div>
+        <div class="service-desc">
+          <h3>런지</h3>
+          <p>측면으로 런지의 자세를 파악합니다.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-media"> <img th:src="@{img/services/pushup2f.jpg}" alt=" "> </div>
+        <div class="service-desc">
+          <h3>푸쉬업</h3>
+          <p>측면 푸쉬업으로 자세를 파악합니다.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-media"> <img th:src="@{img/services/plank1f.jpg}" alt=" "> </div>
+        <div class="service-desc">
+          <h3>플랭크</h3>
+          <p>측면 플랭크 자세를 파악하며 시간을 측정합니다.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-media"> <img th:src="@{img/services/situp4f.jpg}" alt=" "> </div>
+        <div class="service-desc">
+          <h3>윗몸일으키기</h3>
+          <p>측면 윗몸일으키기 자세를 파악합니다.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-media"> <img th:src="@{img/services/TBAf.jpg}" alt=" "> </div>
+        <div class="service-desc">
+          <h3>TBA</h3>
+          <p>다음은 어떤 운동일까요? 많은 기대부탁드립니다!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ 
+
+
+<!-- 트레이너 정보 입력 팝업 --> 
+
+<div id="modal"> 
+</div>
+    <div id = "banner_online" class="modal-sm" style="background-color:E6E6E6;">
+        <div id="close_button" style ="cursor: pointer;"> 
+            <img th:src="@{img/false.png}">
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1 class="text-center">트레이너 정보</h1>
+        <br><br>
+        <div class="pop_content">
+         
+         
+          <div class="container row" style="float: none; margin:0 auto;"> 
+          <div class="col-md-6" style="float: none; margin:0 auto;">
+          <table class="table" id="trainer_lee123" style="display:none;">
+         <tr>
+              <th scope="col" class="text-center" style="color:black; font-weight: bold;">아이디</th>
+              <th scope="col" class="text-center" style="color:black; font-weight: bold;">경력사항 </th>
+              <th scope="col" class="text-center" style="color:black; font-weight: bold;">웹 주소 </th>
+          </tr>
+         <tr th:each="list : ${trainerList}">
+              <td style="color:black;" th:if="${list.TrainerUserId} == 'lee123'" th:text="${list.TrainerUserId}">12</td>
+              <td style="color:black;" th:if="${list.TrainerUserId} == 'lee123'" th:text="${list.Career}">12</td>
+              <td th:if="${list.TrainerUserId} == 'lee123'" th:text="${list.KeyCode}">12</td>
+         </tr>
+         
+        </table>
+        </div>
+        </div>
+        
+<!--           lim123 사용자 -->
+          <div class="container row" style="float: none; margin:0 auto;"> 
+          <div class="col-md-6" style="float: none; margin:0 auto;">
+          <table class="table" id="trainer_lim123" style="display:none;">
+         <tr>
+              <th scope="col" class="text-center" style="color:black; font-weight: bold;">아이디</th>
+              <th scope="col" class="text-center" style="color:black; font-weight: bold;">경력사항 </th>
+              <th scope="col" class="text-center" style="color:black; font-weight: bold;">웹 주소 </th>
+            </tr>
+         <tr th:each="list : ${trainerList}">
+              <td style="color:black;" th:if="${list.TrainerUserId} == 'lim123'" th:text="${list.TrainerUserId}">12</td>
+           <td style="color:black;" th:if="${list.TrainerUserId} == 'lim123'" th:text="${list.Career}">12</td>
+              <td th:if="${list.TrainerUserId} == 'lim123'" th:text="${list.KeyCode}">12</td>
+         </tr>
+        </table>
+        </div>
+        </div>
+
+
+          
+<!-- an1234 사용자 -->
+          <div class="container row" style="float: none; margin:0 auto;"> 
+          <div class="col-md-6" style="float: none; margin:0 auto;">
+          <table class="table" id="trainer_an1234" style="display:none;">
+         <tr>
+              <th scope="col" class="text-center" style="color:black; font-weight: bold;">아이디</th>
+              <th scope="col" class="text-center" style="color:black; font-weight: bold;">경력사항 </th>
+              <th scope="col" class="text-center" style="color:black; font-weight: bold;">웹 주소 </th>
+            </tr>
+         <tr th:each="list : ${trainerList}">
+              <td style="color:black;" th:if="${list.TrainerUserId} == 'an1234'" th:text="${list.TrainerUserId}">12</td>
+           <td style="color:black;" th:if="${list.TrainerUserId} == 'an1234'" th:text="${list.Career}">12</td>
+              <td th:if="${list.TrainerUserId} == 'an1234'" th:text="${list.KeyCode}">12</td>
+         </tr>
+        </table>
+        </div>
+        </div>
+
+          <div class="container row" style="float: none; margin:0 auto;"> 
+             <div class="col-md-6" style="float: none; margin:0 auto;">
+            
+         </div>
+         </div>
+         
+        </div>
+    </div>
+
+  <script type="text/javascript">
+    function dialog(data){
+      // 사용자 아이디가 .. 일때 
+      if(data=="lim123"){
+        $("#banner_online").fadeIn();
+        $("#modal").fadeIn();
+        document.getElementById("trainer_lim123").style.display = "block";
+        document.getElementById("trainer_an1234").style.display = "none";
+        document.getElementById("trainer_lee123").style.display = "none";
+      }
+      if(data=="lee123"){
+        $("#banner_online").fadeIn();
+        $("#modal").fadeIn();
+        document.getElementById("trainer_lim123").style.display = "none";
+        document.getElementById("trainer_an1234").style.display = "none";
+        document.getElementById("trainer_lee123").style.display = "block";
+      }
+      if(data=="an1234"){
+        $("#banner_online").fadeIn();
+        $("#modal").fadeIn();
+        document.getElementById("trainer_lim123").style.display = "none";
+        document.getElementById("trainer_an1234").style.display = "block";
+        document.getElementById("trainer_lee123").style.display = "none";
+      }
+						// 팝업에서 닫기 버튼
+    	$("#close_button").click(function(){
+        $("#banner_online").fadeOut();
+        $("#modal").fadeOut();
+    	});
+    }
+    </script>
+
+
+<!-- trainer Section -->
+<div id="portfolio">
+  <div class="container">
+    <div class="section-title">
+      <h2>운동 시작</h2>
+      <h3>트레이너 광고</h3>
+    </div>
+
+
+
+    <div class="row">
+      <div class="portfolio-items">
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <div class="portfolio-item">
+            <div class="hover-bg"> 
+             <a onclick="dialog('lim123')">
+              <div class="hover-text">
+                <h4>임수범</h4>
+              </div>
+             <img th:src="@{img/Trainer/zoe.jpg}" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <div class="portfolio-item">
+            <div class="hover-bg"> 
+             <a onclick="dialog('lee123')">
+              <div class="hover-text">
+                <h4>이기운</h4>
+              </div>
+              <img th:src="@{img/Trainer/zoe2.jpeg}" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <div class="portfolio-item">
+            <div class="hover-bg"> 
+             <a onclick="dialog('an1234')">
+              <div class="hover-text">
+                <h4>안상구</h4>
+              </div>
+              <img th:src="@{img/Trainer/zoe3.jpeg}" class="img-responsive" alt="Project Title"> </a> </div>
+          </div>
+        </div>
+        
+      </div>
+    </div> 
+    <br><br><br>
+    <a th:if="${session.member != null}">
+        <div style="float: right;">
+          <a type="text" href="/list" class="btn btn-custom btn-lg">트레이너 선택하러 가기</a>
+        </div>
+    </a>    
+    <br><br><br>
+    <br><br><br>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- 대시보드 -->
+<div id="services2" class="content-block">
+            <div id="numbers" class="parallax">
+                <div class="overlay">
+                    <!-- title -->
+                    <div class="container-fluid numbers-title">
+                        <div class="container">
+                            <div class="row block-heading">
+                            <br><br><br>
+                                <h1>오늘의 운동량</h1>
+                                <br><br><br><br><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <!-- number list -->
+                        <ul class="numbersList">
+                            <li class="col-md-2 col-sm-4 col-xs-6">
+                                <h4> 스쿼트 </h4>
+                                <span id="number1" class="count1 count-timer" th:text="${totalCount.Squat}"></span>
+                            </li>
+                            <li class="col-md-2 col-sm-4 col-xs-6">
+                                <h4> 플랭크 </h4>
+                                <span id="number2" class="count2" th:text="${totalCount.Plank}"></span>
+                            </li>
+                            <li class="col-md-2 col-sm-4 col-xs-6">
+                                <h4> 런지 </h4>
+                                <span id="number3"  class="count3" th:text="${totalCount.Lunge}"></span>
+                            </li>
+                            <li class="col-md-2 col-sm-4 col-xs-6">
+                                <h4> 푸쉬업 </h4>
+                                <span id="number4" class="count4" th:text="${totalCount.Pushup}">99</span>
+                            </li>
+                            <li class="col-md-2 col-sm-4 col-xs-6">
+                                <h4> 윗몸일으키기</h4>
+                                <span id="number5" class="count5" th:text="${totalCount.Situp}">124</span>
+                            </li>
+                            <li class="col-md-2 col-sm-4 col-xs-6">
+                                <h4> 총량 </h4>
+                                <span id="number6" class="count6" th:text="${totalCount.Squat}+${totalCount.Plank}+${totalCount.Lunge}+${totalCount.Pushup}+${totalCount.Situp}">45</span>
+                            </li>
+                            
+                        </ul><!-- numbersList end -->
+                        <br><br><br>
+                        <br><br><br>
+                        <br><br><br><br><br><br>
+                          <div style="float: center;">
+                          <a th:if="${session.member != null}">
+                            <a type="text" href="/todayCount?date=2021-01-01" class="btn btn-custom btn-lg">대시보드 입장하기</a>
+                          </a>
+                          </div>
+                    </div><!-- container-fluid end -->
+                </div><!-- overlay end -->
+            </div>
+        </div>
+
+
+
+<!-- Contact 메일 전송 -->
+<!-- Contact Section -->
+<div id="contact">
+  <div class="container">
+    <div class="col-md-8">
+      <div class="row">
+        <div class="section-title">
+          <h2 style="color:#000;">고객센터</h2>
+          <p style="color:#000;">고객님의 소중한 의견을 보내주세요.</p>
+        </div>
+        <form name="sentMessage" id="contactForm" th:action="@{contact}" method="post" novalidate>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input name="name" type="text" id="name" class="form-control" placeholder="Name" required>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input name="email" type="email" id="email" class="form-control" placeholder="Email" required>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+            <p class="help-block text-danger"></p>
+          </div>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-3 col-md-offset-1 contact-info">
+      <div class="contact-item">
+        <h4 style="color:#000;">Contact Info</h4>
+        <p><span style="color:#000;">주소</span >Andong National UNIV.<br>
+          컴퓨터공학과<br>정보통계학과<br>중어중문학과 </p>
+      </div>
+      <div class="contact-item">
+        <p><span style="color:#000;">전화번호</span >054-000-0000</p>
+      </div>
+      <div class="contact-item">
+        <p><span style="color:#000;">Email</span > leekhdeveloper@gmail.com</p>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="social">
+          <ul>
+            <li><a th:href="@{http://facebook.com}"><i class="fa fa-facebook"></i></a></li>
+            <li><a th:href="@{http://fwitter.com}"><i class="fa fa-twitter"></i></a></li>
+            <li><a th:href="@{http://google.com}"><i class="fa fa-google-plus"></i></a></li>
+            <li><a th:href="@{http://youtube.com}"><i class="fa fa-youtube"></i></a></li>
+            <li><a th:href="@{http://andong.ac.kr}"><i>AndongUniv</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer Section -->
+<div id="footer">
+  <div class="container text-center">
+    <p>&copy; 2017 INNOVA. Design by <a th:href="@{http://www.templatewire.com}" rel="nofollow">TemplateWire</a></p>
+  </div>
+</div>
+<script type="text/javascript" th:src="@{js/jquery.1.11.1.js}"></script> 
+<script type="text/javascript" th:src="@{js/bootstrap.js}"></script> 
+<script type="text/javascript" th:src="@{js/SmoothScroll.js}"></script> 
+<script type="text/javascript" th:src="@{js/nivo-lightbox.js}"></script> 
+<script type="text/javascript" th:src="@{js/jqBootstrapValidation.js}"></script> 
+<script type="text/javascript" th:src="@{js/contact_me.js}"></script> 
+<script type="text/javascript" th:src="@{js/main.js}"></script>
+<!--1111123123124235140398716208935670192384709123740912834-->
+
+<!-- js -->
+        <script>
+            new WOW().init();
+        </script>
+
+        <script th:src="@{dateBoard/js/jquery-2.1.3.min.js}"></script>
+        <script th:src="@{dateBoard/js/bootstrap.min.js}"></script>
+        <script th:src="@{dateBoard/js/jquery.actual.min.js}"></script>
+        <script th:src="@{dateBoard/js//isotope.pkgd.min.js}"></script>
+        <script th:src="@{dateBoard/js/owl.carousel.min.js}"></script>
+        <script th:src="@{dateBoard/js/jquery.isonscreen.js}"></script>
+       
+        <script th:src="@{dateBoard/js/main.js}"></script>
+
+        <script>
+        	$(document).ready(function(){
+  				$('.owl-carousel').owlCarousel({
+    				loop:true,
+    				margin:10,
+    				autoplay:true,
+    				autoplayTimeout:3000,
+    				autoplayHoverPause:true,
+    				responsiveClass:true,
+    				responsive:{
+        					0:{
+					            items:1,
+        					},
+					        600:{
+					            items:1,
+					        },
+					        1000:{
+					            items:1,
+					        }
+    				}
+				})
+			});
+        </script>
+
+
+
+</body>
+</html>

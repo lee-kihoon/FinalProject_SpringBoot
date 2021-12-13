@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>방 생성하기</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" th:href="@{images/icons/favicon.ico}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/bootstrap/css/bootstrap.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/animate/animate.css}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/css-hamburgers/hamburgers.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/select2/select2.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/main.css}">
+<!--===============================================================================================-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+	<link rel="stylesheet" type="text/css"  th:href="@{css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome/css/font-awesome.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/nivo-lightbox.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/default.css}">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700}" rel="stylesheet">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Montserrat:400,700}" rel="stylesheet">
+</head>
+
+    <script type="text/javascript">
+
+	// 날짜 가져오기
+    function getDate(){
+        var ddate = document.getElementById("ddate").value;
+        var ttime = document.getElementById("ttime").value;
+        document.getElementById("tdate").value = ddate+" "+ttime+":00";
+        alert("입력이 완료 되었습니다.");
+    }
+
+	// 방코드 생성하기
+	function httpCode(){
+		var rand_0_100 = Math.floor(Math.random() * 900000)+100000;
+		var httpURL = "https://fit.zaba.website/?room="+rand_0_100;
+		alert(httpURL+ " 으로 생성 되었습니다!");
+		document.getElementById('roomcode').value = httpURL;
+	}
+
+
+    </script>
+
+	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+		<!-- nav 바 -->
+		<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  			<div class="container"> 
+    			<div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      				<a class="navbar-brand page-scroll" href="/index2">ZA.BA</a>
+      
+      				<div class="phone"><span>Team</span>054-000-0000</div>
+    			</div>
+  			</div>
+		</nav>
+
+<div class="limiter">
+	<div class="container-login100">
+		<div style="margin-top:30px; ">
+			<span class="login100-form-title-white">
+					<span th:text="${session.member.Name}"/> 님 반갑습니다.
+			</span>
+			<section id="container">
+				<form role="form" method="post" action="/write">
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									
+									<div  class="wrap-input100 validate-input">
+										<input class="input100" type="text" id="title" name="title" placeholder="제목을 입력하세요" >
+										<span class="symbol-input101">
+										제목 :
+										</span>
+									</div>
+									<!--<label for="title">제목</label><br><input type="text" id="title" name="title" />-->
+								</td>
+							</tr>	
+							<tr>
+								<td>
+									<div class="wrap-input100 validate-input">
+										<textarea class="input100" id="content" name="content" ></textarea>
+										<span class="symbol-input101">
+										내용 :
+										</span>
+									</div>
+									<!--<label for="content">내용</label><br><textarea id="content" name="content" ></textarea>-->
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="wrap-input100 validate-input">
+										<input style="color: #1263CE;" class="input100" type="text" id="writer" name="writer" th:value="${session.member.Name}" readOnly/>
+										<span class="symbol-input101">
+										이름 :
+										</span>
+									</div>
+
+									<!--<label for="writer">작성자</label><br><input type="text" id="writer" name="writer" th:value="${session.member.Name}" readOnly/>-->
+								</td>
+							<tr>
+							
+                            <tr>
+								<td>
+									<span class="login101-form-title-white">
+											강의 시작 날짜를 선택하세요.
+									</span>
+									<div class="wrap-input100 validate-input">
+										<input class="input100" type="date" id="ddate" name="ddate" placeholder="강의시작날짜"/>
+										<span class="symbol-input101">
+										날짜 :
+										</span>
+									</div>
+								</td>
+							<tr>
+							<tr>
+								<td>
+									<div class="wrap-input100 validate-input">
+										<input class="input100" type="time" id="ttime" name="ttime"/>
+										<span class="symbol-input101">
+										시간 :
+										</span>
+									</div>
+								<td>
+							<tr>
+                            <tr>
+                                <td>
+
+									<!-- 날짜 확인 -->
+									<div class="wrap-input100 validate-input">
+						
+										<input class="input100" type="text" id="tdate" name="tdate" value="" readOnly placeholder="날짜 입력 완료후 확인.">
+										<span class="focus-input100"></span>
+										<span class="symbol-input101">
+										확인 :
+										</span>
+										<span style="float:right;" class="symbol-input102">
+											<input  class="login100-form-btn-duplicate" type="button" value ="완료" onclick="getDate()">
+										</span>
+						
+									</div>
+                                    
+                                </td>
+                            <tr>
+							<tr>
+                                <td>
+									<span class="login101-form-title-white">
+											방 생성 버튼을 눌러주세요.
+										</span>
+									<!-- 방생성 -->
+									<div class="wrap-input100 validate-input">
+										
+										<input class="input100" type="text" id="roomcode" name="roomcode" placeholder="생성 버튼을 눌러주세요.">
+										<span class="focus-input100"></span>
+										<span class="symbol-input101">
+										생성 :
+										</span>
+										<span style="float:right;" class="symbol-input102">
+											<input  class="login100-form-btn-duplicate" type="button" value ="생성" onclick="httpCode()">
+										</span>
+						
+									</div>
+
+                                </td>
+                            <tr>
+								<td>						
+										<div id="OK" style="margin-top:20px;" class="container-login100-form-btn">
+											<input class="login100-form-btn" type="submit" id="btn" value="제출">
+										</div>
+								</td>
+							</tr>			
+						</tbody>			
+					</table>
+				</form>
+			</section>
+		</div>
+	</div>
+</div>
+
+		
+	
+
+
+
+		<!--===============================================================================================-->	
+		<script th:src="@{resources/vendor/jquery/jquery-3.2.1.min.js}"></script>
+		<!--===============================================================================================-->
+		<script th:src="@{resources/vendor/bootstrap/js/popper.js}"></script>
+		<script th:src="@{resources/vendor/bootstrap/js/bootstrap.min.js}"></script>
+		<!--===============================================================================================-->
+		<script th:src="@{resources/vendor/select2/select2.min.js}"></script>
+		<!--===============================================================================================-->
+		<script th:src="@{resources/vendor/tilt/tilt.jquery.min.js}"></script>
+		<script th:src="@{resources/js/validation.js}"></script>
+		<script >
+			$('.js-tilt').tilt({
+				scale: 1.1
+			})
+		</script>
+		<!--===============================================================================================-->
+		<script th:src="@{resources/js/main.js}"></script>
+	</body>
+</html>

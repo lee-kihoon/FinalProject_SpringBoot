@@ -1,0 +1,155 @@
+<html>
+<head>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" th:href="@{images/icons/favicon.ico}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/bootstrap/css/bootstrap.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/animate/animate.css}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/css-hamburgers/hamburgers.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/select2/select2.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/main.css}">
+<!--===============================================================================================-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+	<link rel="stylesheet" type="text/css"  th:href="@{css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome/css/font-awesome.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/nivo-lightbox.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/default.css}">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700}" rel="stylesheet">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Montserrat:400,700}" rel="stylesheet">
+
+<script>
+
+    function move(){
+        // 현재 날짜
+        let today = new Date();   
+
+        let year = today.getFullYear(); // 년도
+        let month = today.getMonth() + 1;  // 월
+        let date = today.getDate();  // 날짜
+
+
+        let hours = today.getHours(); // 시
+        let minutes = today.getMinutes();  // 분
+        let seconds = today.getSeconds();  // 초
+
+        // 요청받은 날짜
+        var tdate = document.getElementById('tdate').value;
+
+        var tdateYear = tdate.substr(0,4)
+        var tdateMonth = tdate.substr(5,2)
+        var tdateDate = tdate.substr(8,2)
+
+        let tdatehours = tdate.substr(11,2) // 시
+        let tdateminutes = tdate.substr(14,2)  // 분
+        let tdateseconds = tdate.substr(17,2)  // 초
+
+        var roomCode = document.getElementById('roomCode').value;
+
+        let nowDate = new Date(year, month, date, hours, minutes, 00);
+        let roomDate = new Date(tdateYear, tdateMonth, tdateDate, tdatehours, tdateminutes, 00);
+
+        if (nowDate.valueOf() >= roomDate.valueOf()){
+            alert("입장가능한 시간 입니다");
+            var params = {}
+            params['userName'] = document.getElementById("userName").value;
+            var form = document.createElement('form');
+            form.setAttribute('method','post');
+            form.setAttribute('action',roomCode);
+            document.charset="utf-8";
+            for ( var key in params) {	// key, value로 이루어진 객체 params
+                    var hiddenField = document.createElement('input');
+                    hiddenField.setAttribute('type', 'hidden'); //값 입력
+                    hiddenField.setAttribute('name', key);
+                    hiddenField.setAttribute('value', params[key]);
+                    form.appendChild(hiddenField);
+            }
+
+            document.body.appendChild(form);
+            form.submit();
+            //location.assign(roomCode);
+        }else{
+            alert("입장가능한 시간이 아닙니다");
+        }
+    }
+
+
+</script>
+
+</head>
+
+
+
+
+
+	<div class="limiter">
+	    <div class="container-login100">
+		    <div style="margin-top:0px; ">
+
+                 <span class="login100-form-title-white">
+						정보 확인후 입장이 가능합니다.
+				</span>
+
+                <div style="margin-top:20px;" class="wrap-input100 validate-input">
+					<input class="input100" id="roomCode" type="text" th:value="${roomCode}"/>
+					<span class="focus-input100"></span>
+					<span class="symbol-input101">
+						URL :
+					</span>
+				</div>
+
+                <div style="margin-top:20px;" class="wrap-input100 validate-input">
+					<input class="input100" id="tdate" type="text" th:value="${tdate}"/>
+					<span class="focus-input100"></span>
+					<span class="symbol-input101">
+						시작 :
+					</span>
+				</div>
+
+                <div style="margin-top:20px;" class="wrap-input100 validate-input">
+					<input class="input100" id="userName" type="text" th:value="${session.member.UserId}" readOnly/>
+					<span class="focus-input100"></span>
+					<span class="symbol-input101">
+						ID :
+					</span>
+				</div>
+
+
+				<input class="login100-form-btn" type="button" onclick="move()" value="입장하기"/>
+				
+                
+                
+            </div>
+        </div>
+    </div>
+
+<!--===============================================================================================-->	
+	<script th:src="@{resources/vendor/jquery/jquery-3.2.1.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/bootstrap/js/popper.js}"></script>
+	<script th:src="@{resources/vendor/bootstrap/js/bootstrap.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/select2/select2.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/tilt/tilt.jquery.min.js}"></script>
+	<script th:src="@{resources/js/validation.js}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/js/main.js}"></script>
+</html>

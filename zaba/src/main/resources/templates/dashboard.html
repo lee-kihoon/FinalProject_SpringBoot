@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" th:href="@{dashboard/vendors/feather/feather.css}">
+  <link rel="stylesheet" th:href="@{dashboard/vendors/ti-icons/css/themify-icons.css}">
+  <link rel="stylesheet" th:href="@{dashboard/vendors/css/vendor.bundle.base.css}">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" th:href="@{dashboard/vendors/datatables.net-bs4/dataTables.bootstrap4.css}">
+  <link rel="stylesheet" th:href="@{dashboard/vendors/ti-icons/css/themify-icons.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{dashboard/js/select.dataTables.min.css}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" th:href="@{dashboard/css/vertical-layout-light/style.css}">
+  <!-- endinject -->
+  <link rel="shortcut icon" th:href="@{dashboard/images/favicon.png}" />
+</head>
+<body>
+  <div class="container-scroller">
+
+  
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="/index2">ZA.BA</a>
+        
+      </div>
+
+        
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">대시보드</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/todayCount">운동량 체크</a></li>
+              </ul>
+            </div>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">ZABA</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/index2">홈</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/memberUpdateView">정보 수정</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/list">트레이너 리스트</a></li>
+              </ul>
+            </div>
+          </li>
+
+          
+
+
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">자바 대시보드</h3><br>
+                  <h6 class="font-weight-normal mb-0">  이전 그리고 오늘의 운동량을  <span class="text-primary">체크해보세요!</span></h6><br>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card tale-bg">
+                <div class="card-people mt-auto">
+                  <img th:src="@{dashboard/images/dashboard/people.svg}" alt="people">
+                  <div class="weather-info">
+                    <div class="d-flex">
+                      <div>
+                        <h4 class="location font-weight-normal">ZA.BA</h4>
+                        <h6 class="font-weight-normal">Andong National UNIV.</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin transparent">
+              <div class="row">
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body">
+                      <p style = " font-size:1.2em;  font-weight:bold;" class="mb-4">오늘의 누적 운동량</p><br>
+                      <p style = " font-size:3.2em;  font-weight:bold;" class="fs-30 mb-2" th:text="${totalCount.Squat}+${totalCount.Plank}+${totalCount.Lunge}+${totalCount.Pushup}+${totalCount.Situp}" >4006</p>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p style = " font-size:1.2em;  font-weight:bold;" class="mb-4">회원님의 누적 운동량</p><br>
+                      <p style = " font-size:3.2em;  font-weight:bold;" class="fs-30 mb-2" th:text="${myCount.Squat}+ ${myCount.Plank}+ ${myCount.Lunge}+ ${myCount.Pushup}+ ${myCount.Situp}">61344</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                  <div class="card card-light-blue">
+                    <div class="card-body">
+                      <p style = " font-size:1.2em;  font-weight:bold;" class="mb-4">총 이용 고객 님</p><br>
+                      <p style = " font-size:3.2em;  font-weight:bold;" class="fs-30 mb-2" th:text="${totalMember.registerCount}">34040</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 stretch-card transparent">
+                  <div class="card card-light-danger">
+                    <div class="card-body">
+                      <p style = " font-size:1.2em;  font-weight:bold;" class="mb-4">총 트레이너 님</p><br>
+                      <p style = " font-size:3.2em;  font-weight:bold;" class="fs-30 mb-2" th:text="${totalTrainer.trainerCount}" >47033</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title"> <span class="text-primary">모든 고객님의</span> 오늘 운동량</p><br>
+                  <input type="hidden" id ="totalsquat" th:value="${totalCount.Squat}"/>
+                  <input type="hidden" id ="totalplank" th:value="${totalCount.Plank}"/>
+                  <input type="hidden" id ="totallunge" th:value="${totalCount.Lunge}"/>
+                  <input type="hidden" id ="totalpushup" th:value="${totalCount.Pushup}"/>
+                  <input type="hidden" id ="totalsitup" th:value="${totalCount.Situp}"/>
+                  <p class="font-weight-500">모든 고객님의 오늘 운동량을 나타낸 표 입니다.</p>
+                  <div class="d-flex flex-wrap mb-5">
+                    <div class="mr-5 mt-3">
+                      <p class="text-muted">스쿼트</p>
+                      <h3 class="text-primary fs-30 font-weight-medium" th:text="${totalCount.Squat}">12.3k</h3>
+                    </div>
+                    <div class="mr-5 mt-3">
+                      <p class="text-muted">플랭크</p>
+                      <h3 class="text-primary fs-30 font-weight-medium" th:text="${totalCount.Plank}">14k</h3>
+                    </div>
+                    <div class="mr-5 mt-3">
+                      <p class="text-muted">푸쉬업</p>
+                      <h3 class="text-primary fs-30 font-weight-medium" th:text="${totalCount.Pushup}">71.56%</h3>
+                    </div>
+                    <div class="mr-5 mt-3">
+                      <p class="text-muted">런지</p>
+                      <h3 class="text-primary fs-30 font-weight-medium" th:text="${totalCount.Lunge}">71.56%</h3>
+                    </div>
+                    <div class="mt-3">
+                      <p class="text-muted">싯업</p>
+                      <h3 class="text-primary fs-30 font-weight-medium" th:text="${totalCount.Situp}" >34040</h3>
+                    </div> 
+                  </div>
+                  <canvas id="order-chart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                 <div class="d-flex justify-content-between">
+                  <p  class="card-title"><span class="text-primary">회원님의</span> 오늘 운동량</p>
+                 </div>
+                 <br>
+                  <input type="hidden" id ="squat" th:value="${myCount.Squat}"/>
+                  <input type="hidden" id ="plank" th:value="${myCount.Plank}"/>
+                  <input type="hidden" id ="lunge" th:value="${myCount.Lunge}"/>
+                  <input type="hidden" id ="pushup" th:value="${myCount.Pushup}"/>
+                  <input type="hidden" id ="situp" th:value="${myCount.Situp}"/>
+                  <p class="font-weight-500">오늘의 운동량을 체크해보세요! 스쿼트, 플랭크, 푸쉬업, 런지, 싯업을 제공하고 있습니다.</p>
+                  <br><br>
+                  <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
+                  <canvas id="sales-chart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card position-relative">
+                <div class="card-body">
+                  <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <!--<div class="carousel-item active">
+                        <div class="row">
+                          <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
+                            <div class="ml-xl-4 mt-3">
+                            <p class="card-title">Detailed Reports</p>
+                              <h1 class="text-primary">$34040</h1>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
+                              <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                            </div>  
+                            </div>
+                          <div class="col-md-12 col-xl-9">
+                            <div class="row">
+                              <div class="col-md-6 border-right">
+                                <div class="table-responsive mb-3 mb-md-0 mt-3">
+                                  <table class="table table-borderless report-table">
+                                    <tr>
+                                      <td class="text-muted">Illinois</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">713</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Washington</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">583</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Mississippi</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">924</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">California</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">664</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Maryland</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">560</h5></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">Alaska</td>
+                                      <td class="w-100 px-0">
+                                        <div class="progress progress-md mx-4">
+                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                      </td>
+                                      <td><h5 class="font-weight-bold mb-0">793</h5></td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mt-3">
+                                <canvas id="north-america-chart"></canvas>
+                                <div id="north-america-legend"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>-->
+
+
+                      <div class="carousel-item active">
+                        <div class="row">
+                          <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
+                            <div class="ml-xl-4 mt-3">
+                            <p class="card-title">달성률</p>
+                              <h2 class="text-primary">목표</h2>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">모든운동 100개!</h3>
+                              <p class="mb-2 mb-xl-0">운동에 대한 달성률을 나타냅니다. 모든 운동을 조건에 맞게 달성해 보세요! 등급과 구분표로 아래에 나타내어집니다.</p>
+                            </div>  
+                            </div>
+                          <div class="col-md-12 col-xl-9">
+                            <div class="row">
+                              <div class="col-md-6-1 border-right">
+                                <div class="table-responsive mb-3 mb-md-0 mt-3">
+                                  <table class="table table-borderless report-table">
+                                    <tr>
+
+                                    
+                                      <td class="text-muted">스쿼트</td>
+
+                                         <!-- 범위 -->
+                                        <a th:if="${myCount.Squat}>=95">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >A+</h5></td>
+                                        </a>
+
+                                        <a th:if="${myCount.Squat}>=80 and ${myCount.Squat}<95" >
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >A</h5></td>
+                                        </a>
+
+                                         <a th:if="${myCount.Squat}>=60 and ${myCount.Squat}<80">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >B</h5></td>
+                                        </a>
+
+                                        <a th:if="${myCount.Squat}>=40 and ${myCount.Squat}<60">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >C</h5></td>
+                                          </td>
+                                        </a>
+
+                                        <a th:if="${myCount.Squat}>=20 and ${myCount.Squat}<40">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-primary" role="progressbar" style="width: 20%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >D</h5></td>
+                                          </td>
+                                        </a>
+
+                                        <a th:if="${myCount.Squat}>=0 and ${myCount.Squat}<20">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-primary" role="progressbar" style="width: 0%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >F</h5></td>
+                                          </td>
+                                        </a>
+                                        <!-- 범위 -->
+                                    
+                                    </tr>
+
+
+                                    <tr>
+                                      <td class="text-muted">플랭크</td>
+                                      <!-- 범위 -->
+                                        <a th:if="${myCount.Plank}>=95">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-primary" role="progressbar" style="width: 100%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >A+</h5></td>
+                                        </a>
+
+                                        <a th:if="${myCount.Plank}>=80 and ${myCount.Plank}<95" >
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >A</h5></td>
+                                        </a>
+
+                                         <a th:if="${myCount.Plank}>=60 and ${myCount.Plank}<80">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >B</h5></td>
+                                        </a>
+
+                                        <a th:if="${myCount.Plank}>=40 and ${myCount.Plank}<60">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >C</h5></td>
+                                          </td>
+                                        </a>
+
+                                        <a th:if="${myCount.Plank}>=20 and ${myCount.Plank}<40">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >D</h5></td>
+                                          </td>
+                                        </a>
+
+                                        <a th:if="${myCount.Plank}>=0 and ${myCount.Plank}<20">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-warning" role="progressbar" style="width: 1%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >F</h5></td>
+                                          </td>
+                                        </a>
+                                        <!-- 범위 -->
+
+                                    </tr>
+                                    <tr>
+
+
+                                      <td class="text-muted">푸쉬업</td>
+
+                                      <!-- 범위 -->
+                                        <a th:if="${myCount.Pushup}>=95">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >A+</h5></td>
+                                        </a>
+
+                                        <a th:if="${myCount.Pushup}>=80 and ${myCount.Pushup}<95" >
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >A</h5></td>
+                                        </a>
+
+                                         <a th:if="${myCount.Pushup}>=60 and ${myCount.Pushup}<80">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-danger" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >B</h5></td>
+                                        </a>
+
+                                        <a th:if="${myCount.Pushup}>=40 and ${myCount.Pushup}<60">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >C</h5></td>
+                                          </td>
+                                        </a>
+
+                                        <a th:if="${myCount.Pushup}>=20 and ${myCount.Pushup}<40">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >D</h5></td>
+                                          </td>
+                                        </a>
+
+                                        <a th:if="${myCount.Pushup}>=0 and ${myCount.Pushup}<20">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-danger" role="progressbar" style="width: 1%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >F</h5></td>
+                                          </td>
+                                        </a>
+                                        <!-- 범위 -->
+                                    </tr>
+                                    <tr>
+
+
+                                      <td class="text-muted">런지</td>
+                                      <!-- 범위 -->
+                                        <a th:if="${myCount.Lunge}>=95">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-green" role="progressbar" style="width: 100%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >A+</h5></td>
+                                        </a>
+
+                                        <a th:if="${myCount.Lunge}>=80 and ${myCount.Lunge}<95" >
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-green" role="progressbar" style="width: 90%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >A</h5></td>
+                                        </a>
+
+                                         <a th:if="${myCount.Lunge}>=60 and ${myCount.Lunge}<80">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-green" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >B</h5></td>
+                                        </a>
+
+                                        <a th:if="${myCount.Lunge}>=40 and ${myCount.Lunge}<60">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-green" role="progressbar" style="width: 50%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >C</h5></td>
+                                          </td>
+                                        </a>
+
+                                        <a th:if="${myCount.Lunge}>=20 and ${myCount.Lunge}<40">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-green" role="progressbar" style="width: 20%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >D</h5></td>
+                                          </td>
+                                        </a>
+
+                                        <a th:if="${myCount.Lunge}>=0 and ${myCount.Lunge}<20">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-green" role="progressbar" style="width: 1%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >F</h5></td>
+                                          </td>
+                                        </a>
+                                        <!-- 범위 -->
+                                    </tr>
+                                    <tr>
+                                      <td class="text-muted">싯업</td>
+                                          <!-- 범위 -->
+                                        <a th:if="${myCount.Situp}>=95">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >A+</h5></td>
+                                        </a>
+
+                                        <a th:if="${myCount.Situp}>=80 and ${myCount.Situp}<95" >
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >A</h5></td>
+                                        </a>
+
+                                         <a th:if="${myCount.Situp}>=60 and ${myCount.Situp}<80">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                          </td>
+                                          <td><h5 class="font-weight-bold mb-0" >B</h5></td>
+                                        </a>
+
+                                        <a th:if="${myCount.Situp}>=40 and ${myCount.Situp}<60">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >C</h5></td>
+                                          </td>
+                                        </a>
+
+                                        <a th:if="${myCount.Situp}>=20 and ${myCount.Situp}<40">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >D</h5></td>
+                                          </td>
+                                        </a>
+
+                                        <a th:if="${myCount.Situp}>=0 and ${myCount.Situp}<20">
+                                          <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                              <div class="progress-bar bg-info" role="progressbar" style="width: 1%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <td><h5 class="font-weight-bold mb-0" >F</h5></td>
+                                          </td>
+                                        </a>
+                                        <!-- 범위 -->
+                                    </tr>
+
+                                  </table>
+                                  
+                                </div>
+                                
+                                
+                            </div>
+                               <p class="mb-2 mb-xl-0">
+                                <br><br>
+                                <span> 　　A+ 95개 이상 </span><br><br>
+                                <span> 　　A 80개 이상 </span><br><br>
+                                <span> 　　B 60개 이상 </span><br><br>
+                                <span> 　　C 40개 이상 </span><br><br>
+                                <span> 　　D 20개 이상 </span><br><br>
+                                <span> 　　F 0개 이상 </span><br>
+                              </p>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-7 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0"> <h3 class="text-primary">스쿼트 TOP 5</h3></p><br>
+                  <div class="table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>회원 아이디</th>
+                          <th>갯수</th>
+                          <th>날짜</th>
+                          
+                        </tr>  
+                      </thead>
+                      <tbody>
+
+                      <tr th:each="topSquat : ${topSquat}">
+                          <td th:text="${topSquat.UserName}"></td>
+                          <td class="font-weight-bold" th:text="${topSquat.Squat}+ '개'"></td>
+                          <td>Today</td>
+                      </tr>
+                      </tbody>
+                    </table>
+
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 stretch-card grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0"><h3 class="text-primary">인공지능 모델</h3></p><br>
+                  <div class="table-responsive">
+                    <table class="table table-borderless">
+                      <thead>
+                        <tr>
+                          <th class="pl-0  pb-2 border-bottom">종류</th>
+                          <th class="border-bottom pb-2">정확도</th>
+                          <th class="border-bottom pb-2">측정 방식</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                        <td class="pl-0">스쿼트</td>
+                          <td><p class="mb-0"><span class="font-weight-bold mr-2">97.85%</span></p></td>
+                          <td class="text-muted">정면</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-0">플랭크</td>
+                          <td><p class="mb-0"><span class="font-weight-bold mr-2">98.2%</span></p></td>
+                          <td class="text-muted">측면</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-0">푸쉬업</td>
+                          <td><p class="mb-0"><span class="font-weight-bold mr-2">98.5%</span></p></td>
+                          <td class="text-muted">측면</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-0">런지</td>
+                          <td><p class="mb-0"><span class="font-weight-bold mr-2">99.7%</span></p></td>
+                          <td class="text-muted">측면</td>
+                        </tr>
+                        <tr>
+                          <td class="pl-0">싯업</td>
+                          <td><p class="mb-0"><span class="font-weight-bold mr-2">99.6%</span></p></td>
+                          <td class="text-muted">측면</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+           <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                 <div class="d-flex justify-content-between">
+                  <p  class="card-title"><span class="text-primary">회원님의</span> 날짜별 운동량</p>
+                 </div>
+                 <br>
+                 
+                 
+                 <input  type="date" name="selectedDate" id="selectedDate"  >
+                 <script>
+                  function dateCount(){
+                    var getDate = document.getElementById("selectedDate").value;
+                    location.href="/todayCount?date="+getDate;
+                  }
+                 </script>
+                 <input type="button" name="dateSubmit" id="dateSubmit" value="확인" onclick="dateCount()">
+                 <input type="hidden" id="textDate" name="textDate" th:value="${#httpServletRequest.getParameter('date')}">
+                 <div th:if="${dateCount} != null">
+                 <br><br>
+                      <p class="font-weight-500">데이터를 조회하신 정보 입니다.</p>
+                      <input type="hidden" id ="dateSquat" th:value="${dateCount.Squat}"/>
+                      <input type="hidden" id ="datePlank" th:value="${dateCount.Plank}"/>
+                      <input type="hidden" id ="dateLunge" th:value="${dateCount.Lunge}"/>
+                      <input type="hidden" id ="datePushup" th:value="${dateCount.Pushup}"/>
+                      <input type="hidden" id ="dateSitup" th:value="${dateCount.Situp}"/>
+                    </div>
+                    <div th:if="${dateCount} == null">
+                    <br><br>
+                      <p class="font-weight-500">오늘의 데이터를 조회하셨거나 정보가 존재하지 않습니다.</p>
+                      <input type="hidden" id ="dateSquat" value="0"/>
+                      <input type="hidden" id ="datePlank" value="0"/>
+                      <input type="hidden" id ="dateLunge" value="0"/>
+                      <input type="hidden" id ="datePushup" value="0"/>
+                      <input type="hidden" id ="dateSitup" value="0"/>
+                    </div>
+                  
+                  
+                  <br><br>
+                  <div id="sales-legend2" class="chartjs-legend mt-4 mb-2"></div>
+                  <canvas id="sales-chart2"></canvas>
+                </div>
+              </div>
+            </div>
+         
+
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Distributed by <a href="https://www.themewagon.com/" target="_blank">Themewagon</a></span> 
+          </div>
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script th:src="@{dashboard/vendors/js/vendor.bundle.base.js}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script th:src="@{dashboard/vendors/chart.js/Chart.min.js}"></script>
+  <!--<script th:src="@{dashboard/vendors/datatables.net/jquery.dataTables.js}"></script>-->
+  <!--<script th:src="@{dashboard/vendors/datatables.net-bs4/dataTables.bootstrap4.js}"></script>-->
+  <script th:src="@{dashboard/js/dataTables.select.min.js}"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script sth:src="@{dashboard/js/off-canvas.js}"></script>
+  <script th:src="@{dashboard/js/hoverable-collapse.js}"></script>
+  <script th:src="@{dashboard/js/template.js}"></script>
+  <script th:src="@{dashboard/js/settings.js}"></script>
+  <script th:src="@{dashboard/js/todolist.js}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script th:src="@{dashboard/js/dashboard.js}"></script>
+  <script th:src="@{dashboard/js/Chart.roundedBarCharts.js}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+

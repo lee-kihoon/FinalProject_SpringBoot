@@ -1,0 +1,1471 @@
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Sep  4 13:56:07 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x559bc7c57580
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+ModuleNotFoundError: No module named 'hello'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 305267, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Sep  4 14:19:18 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55db53371580
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-04 14:19:26.391744: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-04 14:19:26.391774: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-04 14:19:47.537326: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-04 14:19:47.537359: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-04 14:19:47.537375: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-04 14:19:47.537670: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WSGI app 0 (mountpoint='') ready in 30 seconds on interpreter 0x55db53371580 pid: 305667 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 305667, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Sep  4 14:26:52 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55c3ea2ee5d0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-04 14:26:52.947837: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-04 14:26:52.947865: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-04 14:26:53.872407: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-04 14:26:53.872436: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-04 14:26:53.872451: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-04 14:26:53.872604: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55c3ea2ee5d0 pid: 305816 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 305816, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Sep  4 15:38:08 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a9a86f35d0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-04 15:38:08.737384: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-04 15:38:08.737412: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-04 15:38:09.679461: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-04 15:38:09.679490: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-04 15:38:09.679504: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-04 15:38:09.679648: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 307352, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Sep  4 15:40:59 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+!!! Python Home is not a directory: /opt/anaconda/bin/ !!!
+Set PythonHome to /opt/anaconda/bin/
+Python path configuration:
+  PYTHONHOME = '/opt/anaconda/bin/'
+  PYTHONPATH = (not set)
+  program name = '/opt/anaconda/bin//bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/opt/anaconda/bin//bin/python'
+  sys.base_prefix = '/opt/anaconda/bin'
+  sys.base_exec_prefix = '/opt/anaconda/bin'
+  sys.executable = '/opt/anaconda/bin//bin/python'
+  sys.prefix = '/opt/anaconda/bin'
+  sys.exec_prefix = '/opt/anaconda/bin'
+  sys.path = [
+    '/opt/anaconda/bin/lib/python38.zip',
+    '/opt/anaconda/bin/lib/python3.8',
+    '/opt/anaconda/bin/lib/python3.8/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007fe2436ff740 (most recent call first):
+<no Python frame>
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Sep  4 15:44:19 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+Set PythonHome to /usr/bin/
+Python path configuration:
+  PYTHONHOME = '/usr/bin/'
+  PYTHONPATH = (not set)
+  program name = '/usr/bin//bin/python'
+  isolated = 0
+  environment = 1
+  user site = 1
+  import site = 1
+  sys._base_executable = '/usr/bin//bin/python'
+  sys.base_prefix = '/usr/bin'
+  sys.base_exec_prefix = '/usr/bin'
+  sys.executable = '/usr/bin//bin/python'
+  sys.prefix = '/usr/bin'
+  sys.exec_prefix = '/usr/bin'
+  sys.path = [
+    '/usr/bin/lib/python38.zip',
+    '/usr/bin/lib/python3.8',
+    '/usr/bin/lib/python3.8/lib-dynload',
+  ]
+Fatal Python error: init_fs_encoding: failed to get the Python codec of the filesystem encoding
+Python runtime state: core initialized
+ModuleNotFoundError: No module named 'encodings'
+
+Current thread 0x00007f7f6a221740 (most recent call first):
+<no Python frame>
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Sep  4 15:45:25 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5589a0e12b80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-04 15:45:25.930982: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-04 15:45:25.931011: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-04 15:45:26.872639: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-04 15:45:26.872677: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-04 15:45:26.872701: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-04 15:45:26.873224: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 307742, cores: 1)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Sep  4 15:46:15 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55f136349b80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-04 15:46:15.406061: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-04 15:46:15.406092: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-04 15:46:16.343021: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-04 15:46:16.343049: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-04 15:46:16.343064: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-04 15:46:16.343199: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 307762, cores: 1)
+*** Starting uWSGI 2.0.18-debian (64bit) on [Sat Sep  4 15:46:19 2021] ***
+compiled with version: 10.0.1 20200405 (experimental) [master revision 0be9efad938:fcb98e4978a:705510a708d3642c9c962beb663c476167e4e8a4] on 11 April 2020 11:15:55
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x556255810010
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-04 15:46:19.694507: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-04 15:46:19.694534: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-04 15:46:20.597944: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-04 15:46:20.597974: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-04 15:46:20.597988: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-04 15:46:20.598123: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 307779, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/1] 10.0.2.2 () {44 vars in 809 bytes} [Sat Sep  4 15:48:32 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/2] 10.0.2.2 () {44 vars in 769 bytes} [Sat Sep  4 15:48:32 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/3] 10.0.2.2 () {42 vars in 787 bytes} [Sat Sep  4 15:48:41 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/4] 10.0.2.2 () {44 vars in 769 bytes} [Sat Sep  4 15:48:41 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/5] 10.0.2.2 () {44 vars in 809 bytes} [Sat Sep  4 15:48:54 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/6] 10.0.2.2 () {44 vars in 769 bytes} [Sat Sep  4 15:48:54 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/7] 10.0.2.2 () {42 vars in 787 bytes} [Sat Sep  4 15:49:08 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/8] 10.0.2.2 () {44 vars in 769 bytes} [Sat Sep  4 15:49:08 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/9] 10.0.2.2 () {42 vars in 787 bytes} [Sat Sep  4 15:49:10 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/10] 10.0.2.2 () {44 vars in 769 bytes} [Sat Sep  4 15:49:10 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/11] 10.0.2.2 () {42 vars in 787 bytes} [Sat Sep  4 15:49:11 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/12] 10.0.2.2 () {44 vars in 769 bytes} [Sat Sep  4 15:49:11 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/13] 10.0.2.2 () {44 vars in 809 bytes} [Sat Sep  4 15:49:21 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/14] 10.0.2.2 () {44 vars in 802 bytes} [Sat Sep  4 15:49:26 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/15] 10.0.2.2 () {44 vars in 762 bytes} [Sat Sep  4 15:49:26 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/16] 10.0.2.2 () {42 vars in 781 bytes} [Sat Sep  4 15:49:26 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/17] 10.0.2.2 () {44 vars in 763 bytes} [Sat Sep  4 15:49:27 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/18] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:00 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/19] 10.0.2.2 () {42 vars in 725 bytes} [Sat Sep  4 16:09:00 2021] GET /swaggerui/swagger-ui.css => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/20] 10.0.2.2 () {42 vars in 725 bytes} [Sat Sep  4 16:09:00 2021] GET /swaggerui/droid-sans.css => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/21] 10.0.2.2 () {42 vars in 721 bytes} [Sat Sep  4 16:09:00 2021] GET /swaggerui/swagger-ui-bundle.js => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/22] 10.0.2.2 () {42 vars in 744 bytes} [Sat Sep  4 16:09:00 2021] GET /swaggerui/swagger-ui-standalone-preset.js => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/23] 10.0.2.2 () {40 vars in 629 bytes} [Sat Sep  4 16:09:00 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/24] 10.0.2.2 () {40 vars in 755 bytes} [Sat Sep  4 16:09:01 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/25] 10.0.2.2 () {40 vars in 715 bytes} [Sat Sep  4 16:09:01 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/26] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:04 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/27] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:06 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/28] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:08 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/29] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:10 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/30] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:12 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/31] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:14 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/32] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:16 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/33] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:20 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/34] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:25 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/35] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:09:30 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/36] 10.0.2.2 () {40 vars in 657 bytes} [Sat Sep  4 16:11:04 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/37] 10.0.2.2 () {40 vars in 657 bytes} [Sat Sep  4 16:11:07 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/38] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:13:22 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/39] 10.0.2.2 () {44 vars in 808 bytes} [Sat Sep  4 16:13:35 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/40] 10.0.2.2 () {44 vars in 768 bytes} [Sat Sep  4 16:13:35 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/41] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:14:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/42] 10.0.2.2 () {40 vars in 658 bytes} [Sat Sep  4 16:14:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/43] 10.0.2.2 () {44 vars in 808 bytes} [Sat Sep  4 16:15:10 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/44] 10.0.2.2 () {44 vars in 768 bytes} [Sat Sep  4 16:15:10 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/45] 10.0.2.2 () {40 vars in 749 bytes} [Sat Sep  4 19:16:02 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 307779|app: -1|req: -1/46] 10.0.2.2 () {40 vars in 704 bytes} [Sat Sep  4 19:16:02 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+                                                                                                                                                                                                                                                                          *** Starting uWSGI 2.0.19.1 (64bit) on [Sat Sep  4 19:56:30 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55656ad6f060
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+*** Starting uWSGI 2.0.18-debian (64bit) on [Sat Sep  4 19:56:38 2021] ***
+compiled with version: 10.0.1 20200405 (experimental) [master revision 0be9efad938:fcb98e4978a:705510a708d3642c9c962beb663c476167e4e8a4] on 11 April 2020 11:15:55
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55c56c1611b0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-04 19:56:38.560396: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-04 19:56:38.560434: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-04 19:56:39.565282: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-04 19:56:39.565373: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-04 19:56:39.678126: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-04 19:56:39.678175: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-04 19:56:39.678192: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-04 19:56:39.678333: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 2512, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/1] 10.0.2.2 () {42 vars in 781 bytes} [Sat Sep  4 19:56:42 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/2] 10.0.2.2 () {44 vars in 758 bytes} [Sat Sep  4 19:56:42 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+2021-09-04 19:57:01.522468: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-04 19:57:01.522533: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-04 19:57:01.522556: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-04 19:57:01.523037: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 2503, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/3] 10.0.2.2 () {40 vars in 705 bytes} [Sat Sep  4 19:57:07 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/4] 10.0.2.2 () {58 vars in 1056 bytes} [Sat Sep  4 20:44:12 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/5] 10.0.2.2 () {58 vars in 1012 bytes} [Sat Sep  4 20:44:12 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/6] 10.0.2.2 () {52 vars in 890 bytes} [Sat Sep  4 21:30:52 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/7] 10.0.2.2 () {34 vars in 377 bytes} [Sat Sep  4 22:34:45 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/8] 10.0.2.2 () {36 vars in 427 bytes} [Sat Sep  4 22:36:03 2021] GET /.DS_Store => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/9] 10.0.2.2 () {34 vars in 405 bytes} [Sat Sep  4 22:36:04 2021] GET /nginx.conf => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/10] 10.0.2.2 () {34 vars in 397 bytes} [Sat Sep  4 22:36:05 2021] GET /status => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/11] 10.0.2.2 () {34 vars in 469 bytes} [Sat Sep  4 22:36:05 2021] GET /status%3E%3Cscript%3Ealert(31337)%3C%2Fscript%3E => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/12] 10.0.2.2 () {34 vars in 462 bytes} [Sun Sep  5 04:10:23 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/13] 10.0.2.2 () {36 vars in 471 bytes} [Sun Sep  5 04:13:14 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/14] 10.0.2.2 () {38 vars in 553 bytes} [Sun Sep  5 04:14:04 2021] GET /robots.txt => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/15] 10.0.2.2 () {38 vars in 533 bytes} [Sun Sep  5 04:14:05 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/16] 10.0.2.2 () {34 vars in 377 bytes} [Sun Sep  5 05:01:45 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/17] 10.0.2.2 () {36 vars in 406 bytes} [Sun Sep  5 06:19:45 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/18] 10.0.2.2 () {40 vars in 725 bytes} [Sun Sep  5 06:30:02 2021] POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/19] 10.0.2.2 () {38 vars in 637 bytes} [Sun Sep  5 06:30:02 2021] GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/20] 10.0.2.2 () {36 vars in 733 bytes} [Sun Sep  5 06:30:05 2021] GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/21] 10.0.2.2 () {36 vars in 569 bytes} [Sun Sep  5 06:30:05 2021] GET /?XDEBUG_SESSION_START=phpstorm => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/22] 10.0.2.2 () {42 vars in 696 bytes} [Sun Sep  5 06:30:06 2021] POST /mifs/.;/services/LogService => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/23] 10.0.2.2 () {36 vars in 526 bytes} [Sun Sep  5 06:30:08 2021] GET /console/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/24] 10.0.2.2 () {36 vars in 600 bytes} [Sun Sep  5 06:30:08 2021] GET /wp-content/plugins/wp-file-manager/readme.txt => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/25] 10.0.2.2 () {38 vars in 615 bytes} [Sun Sep  5 06:30:11 2021] GET /_ignition/execute-solution => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/26] 10.0.2.2 () {36 vars in 510 bytes} [Sun Sep  5 06:30:11 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/27] 10.0.2.2 () {38 vars in 563 bytes} [Sun Sep  5 06:30:12 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/28] 10.0.2.2 () {40 vars in 649 bytes} [Sun Sep  5 06:30:14 2021] POST /Autodiscover/Autodiscover.xml => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/29] 10.0.2.2 () {40 vars in 623 bytes} [Sun Sep  5 06:30:14 2021] POST /api/jsonws/invoke => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/30] 10.0.2.2 () {36 vars in 436 bytes} [Sun Sep  5 06:58:02 2021] GET /actuator/health => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/31] 10.0.2.2 () {36 vars in 556 bytes} [Sun Sep  5 08:55:01 2021] GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/32] 10.0.2.2 () {36 vars in 406 bytes} [Sun Sep  5 09:44:07 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/33] 10.0.2.2 () {32 vars in 349 bytes} [Sun Sep  5 12:17:46 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/34] 10.0.2.2 () {30 vars in 320 bytes} [Sun Sep  5 12:17:47 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/35] 10.0.2.2 () {30 vars in 320 bytes} [Sun Sep  5 14:03:16 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/36] 10.0.2.2 () {36 vars in 406 bytes} [Sun Sep  5 15:23:49 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/37] 10.0.2.2 () {36 vars in 501 bytes} [Sun Sep  5 19:49:12 2021] GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/38] 10.0.2.2 () {40 vars in 623 bytes} [Sun Sep  5 20:48:16 2021] POST /api/jsonws/invoke => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/39] 10.0.2.2 () {38 vars in 637 bytes} [Sun Sep  5 20:48:17 2021] GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/40] 10.0.2.2 () {40 vars in 725 bytes} [Sun Sep  5 20:48:18 2021] POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/41] 10.0.2.2 () {36 vars in 733 bytes} [Sun Sep  5 20:48:20 2021] GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/42] 10.0.2.2 () {36 vars in 526 bytes} [Sun Sep  5 20:48:22 2021] GET /console/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/43] 10.0.2.2 () {36 vars in 569 bytes} [Sun Sep  5 20:48:22 2021] GET /?XDEBUG_SESSION_START=phpstorm => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/44] 10.0.2.2 () {38 vars in 615 bytes} [Sun Sep  5 20:48:24 2021] GET /_ignition/execute-solution => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/45] 10.0.2.2 () {36 vars in 600 bytes} [Sun Sep  5 20:48:25 2021] GET /wp-content/plugins/wp-file-manager/readme.txt => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/46] 10.0.2.2 () {36 vars in 510 bytes} [Sun Sep  5 20:48:32 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/47] 10.0.2.2 () {52 vars in 757 bytes} [Sun Sep  5 22:42:25 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/48] 10.0.2.2 () {50 vars in 864 bytes} [Sun Sep  5 22:42:31 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/49] 10.0.2.2 () {52 vars in 757 bytes} [Sun Sep  5 22:44:08 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/50] 10.0.2.2 () {50 vars in 865 bytes} [Sun Sep  5 22:44:11 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/51] 10.0.2.2 () {30 vars in 324 bytes} [Mon Sep  6 00:18:38 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/52] 10.0.2.2 () {36 vars in 455 bytes} [Mon Sep  6 00:18:39 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/53] 10.0.2.2 () {50 vars in 856 bytes} [Mon Sep  6 01:46:13 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/54] 10.0.2.2 () {30 vars in 324 bytes} [Mon Sep  6 05:28:42 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/55] 10.0.2.2 () {40 vars in 627 bytes} [Mon Sep  6 05:33:30 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/56] 10.0.2.2 () {36 vars in 500 bytes} [Mon Sep  6 06:43:00 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/57] 10.0.2.2 () {36 vars in 556 bytes} [Mon Sep  6 08:55:05 2021] GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/58] 10.0.2.2 () {30 vars in 320 bytes} [Mon Sep  6 10:10:43 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/59] 10.0.2.2 () {36 vars in 436 bytes} [Mon Sep  6 10:27:02 2021] GET /actuator/health => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/60] 10.0.2.2 () {34 vars in 577 bytes} [Mon Sep  6 11:08:38 2021] GET /autodiscover/autodiscover.json?@bofisa1.com/mapi/nspi/?&Email=autodiscover/autodiscover.json?@bofisa1.com => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/61] 10.0.2.2 () {38 vars in 587 bytes} [Mon Sep  6 13:37:00 2021] GET ///remote/fgt_lang?lang=/../../../..//////////dev/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/62] 10.0.2.2 () {36 vars in 472 bytes} [Mon Sep  6 15:35:07 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/63] 10.0.2.2 () {38 vars in 533 bytes} [Mon Sep  6 15:36:00 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/64] 10.0.2.2 () {38 vars in 555 bytes} [Mon Sep  6 15:36:01 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/65] 10.0.2.2 () {36 vars in 406 bytes} [Mon Sep  6 15:37:18 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/66] 10.0.2.2 () {36 vars in 516 bytes} [Mon Sep  6 15:46:06 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/67] 10.0.2.2 () {36 vars in 406 bytes} [Mon Sep  6 19:20:13 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/68] 10.0.2.2 () {36 vars in 490 bytes} [Mon Sep  6 19:51:29 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/69] 10.0.2.2 () {38 vars in 536 bytes} [Mon Sep  6 20:28:52 2021] GET /.env => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/70] 10.0.2.2 () {42 vars in 643 bytes} [Mon Sep  6 20:28:54 2021] POST / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/71] 10.0.2.2 () {36 vars in 501 bytes} [Mon Sep  6 21:15:30 2021] GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/72] 10.0.2.2 () {38 vars in 615 bytes} [Mon Sep  6 22:04:03 2021] GET /_ignition/execute-solution => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/73] 10.0.2.2 () {40 vars in 623 bytes} [Mon Sep  6 22:04:03 2021] POST /api/jsonws/invoke => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/74] 10.0.2.2 () {38 vars in 563 bytes} [Mon Sep  6 22:04:04 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/75] 10.0.2.2 () {36 vars in 510 bytes} [Mon Sep  6 22:04:06 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/76] 10.0.2.2 () {36 vars in 733 bytes} [Mon Sep  6 22:04:09 2021] GET /index.php?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/77] 10.0.2.2 () {36 vars in 600 bytes} [Mon Sep  6 22:04:09 2021] GET /wp-content/plugins/wp-file-manager/readme.txt => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/78] 10.0.2.2 () {36 vars in 526 bytes} [Mon Sep  6 22:04:11 2021] GET /console/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/79] 10.0.2.2 () {36 vars in 569 bytes} [Mon Sep  6 22:04:12 2021] GET /?XDEBUG_SESSION_START=phpstorm => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/80] 10.0.2.2 () {42 vars in 696 bytes} [Mon Sep  6 22:04:14 2021] POST /mifs/.;/services/LogService => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/81] 10.0.2.2 () {40 vars in 649 bytes} [Mon Sep  6 22:04:15 2021] POST /Autodiscover/Autodiscover.xml => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/82] 10.0.2.2 () {40 vars in 725 bytes} [Mon Sep  6 22:04:19 2021] POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/83] 10.0.2.2 () {38 vars in 637 bytes} [Mon Sep  6 22:04:19 2021] GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/84] 10.0.2.2 () {30 vars in 324 bytes} [Mon Sep  6 23:37:06 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2512|app: -1|req: -1/85] 10.0.2.2 () {36 vars in 455 bytes} [Mon Sep  6 23:37:06 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Sep  9 15:28:29 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56022c1212b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-09 15:28:39.140899: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-09 15:28:39.140965: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+*** Starting uWSGI 2.0.18-debian (64bit) on [Thu Sep  9 15:28:39 2021] ***
+compiled with version: 10.0.1 20200405 (experimental) [master revision 0be9efad938:fcb98e4978a:705510a708d3642c9c962beb663c476167e4e8a4] on 11 April 2020 11:15:55
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5594229ad1b0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-09 15:29:00.465884: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-09 15:29:00.466012: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-09 15:29:44.610399: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-09 15:29:44.610446: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-09 15:29:44.610466: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-09 15:29:44.610843: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 2546, cores: 1)
+2021-09-09 15:29:49.132873: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-09 15:29:49.133024: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-09 15:29:49.133071: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-09 15:29:49.133295: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 2554, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/1] 10.0.2.2 () {58 vars in 1057 bytes} [Thu Sep  9 15:35:29 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/2] 10.0.2.2 () {58 vars in 1013 bytes} [Thu Sep  9 15:35:29 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/3] 10.0.2.2 () {58 vars in 1057 bytes} [Thu Sep  9 15:35:32 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/4] 10.0.2.2 () {58 vars in 1013 bytes} [Thu Sep  9 15:35:32 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/5] 10.0.2.2 () {36 vars in 406 bytes} [Thu Sep  9 15:39:18 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/6] 10.0.2.2 () {36 vars in 500 bytes} [Thu Sep  9 15:53:26 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/7] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:25:47 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/8] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:25:50 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/9] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:25:51 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/10] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:25:51 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/11] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:25:51 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/12] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:25:52 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/13] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:25:52 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/14] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:25:53 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/15] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:25:53 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/16] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:25:56 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/17] 10.0.2.2 () {56 vars in 1043 bytes} [Thu Sep  9 17:26:04 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/18] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:33:48 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/19] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:33:49 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/20] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 17:33:50 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/21] 10.0.2.2 () {56 vars in 1045 bytes} [Thu Sep  9 17:33:57 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/22] 10.0.2.2 () {56 vars in 1045 bytes} [Thu Sep  9 17:34:00 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/23] 10.0.2.2 () {40 vars in 562 bytes} [Thu Sep  9 17:42:23 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Thu Sep  9 18:09:43 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /pages/createpage-entervariables.action?SpaceKey=x (ip 10.0.2.2) !!!
+Thu Sep  9 18:09:43 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during POST /pages/createpage-entervariables.action?SpaceKey=x (10.0.2.2)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/24] 10.0.2.2 () {38 vars in 599 bytes} [Thu Sep  9 18:09:43 2021] POST /pages/createpage-entervariables.action?SpaceKey=x => generated 0 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 0 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/25] 10.0.2.2 () {38 vars in 615 bytes} [Thu Sep  9 18:53:15 2021] GET /_ignition/execute-solution => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/26] 10.0.2.2 () {40 vars in 649 bytes} [Thu Sep  9 18:53:18 2021] POST /Autodiscover/Autodiscover.xml => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/27] 10.0.2.2 () {38 vars in 563 bytes} [Thu Sep  9 18:53:22 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/28] 10.0.2.2 () {36 vars in 510 bytes} [Thu Sep  9 18:53:23 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/29] 10.0.2.2 () {36 vars in 526 bytes} [Thu Sep  9 18:53:26 2021] GET /console/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/30] 10.0.2.2 () {38 vars in 637 bytes} [Thu Sep  9 18:53:26 2021] GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/31] 10.0.2.2 () {42 vars in 696 bytes} [Thu Sep  9 18:53:30 2021] POST /mifs/.;/services/LogService => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/32] 10.0.2.2 () {36 vars in 600 bytes} [Thu Sep  9 18:53:31 2021] GET /wp-content/plugins/wp-file-manager/readme.txt => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/33] 10.0.2.2 () {40 vars in 623 bytes} [Thu Sep  9 18:53:33 2021] POST /api/jsonws/invoke => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/34] 10.0.2.2 () {40 vars in 725 bytes} [Thu Sep  9 18:53:33 2021] POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/35] 10.0.2.2 () {36 vars in 501 bytes} [Thu Sep  9 21:21:15 2021] GET /owa/auth/logon.aspx?url=https%3a%2f%2f1%2fecp%2f => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/36] 10.0.2.2 () {56 vars in 1045 bytes} [Thu Sep  9 23:50:46 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/37] 10.0.2.2 () {56 vars in 1045 bytes} [Thu Sep  9 23:51:11 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/38] 10.0.2.2 () {56 vars in 1069 bytes} [Thu Sep  9 23:51:15 2021] GET /todos/result => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/39] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 23:52:34 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/40] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 23:54:23 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/41] 10.0.2.2 () {56 vars in 1044 bytes} [Thu Sep  9 23:54:24 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/42] 10.0.2.2 () {56 vars in 1045 bytes} [Thu Sep  9 23:56:22 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/43] 10.0.2.2 () {56 vars in 1044 bytes} [Fri Sep 10 01:09:12 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/44] 10.0.2.2 () {58 vars in 1069 bytes} [Fri Sep 10 01:09:21 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/45] 10.0.2.2 () {56 vars in 1044 bytes} [Fri Sep 10 01:09:23 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/46] 10.0.2.2 () {56 vars in 1044 bytes} [Fri Sep 10 01:09:36 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/47] 10.0.2.2 () {56 vars in 1045 bytes} [Fri Sep 10 01:10:22 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/48] 10.0.2.2 () {56 vars in 1045 bytes} [Fri Sep 10 01:10:23 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/49] 10.0.2.2 () {56 vars in 1045 bytes} [Fri Sep 10 01:10:24 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/50] 10.0.2.2 () {56 vars in 1045 bytes} [Fri Sep 10 01:11:25 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/51] 10.0.2.2 () {56 vars in 1045 bytes} [Fri Sep 10 01:11:26 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/52] 10.0.2.2 () {56 vars in 1045 bytes} [Fri Sep 10 01:11:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/53] 10.0.2.2 () {56 vars in 1045 bytes} [Fri Sep 10 01:11:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/54] 10.0.2.2 () {56 vars in 1045 bytes} [Fri Sep 10 01:11:48 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/55] 10.0.2.2 () {56 vars in 1045 bytes} [Fri Sep 10 01:12:50 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/56] 10.0.2.2 () {56 vars in 1044 bytes} [Fri Sep 10 01:14:48 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/57] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 01:30:39 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/58] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 01:30:39 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/59] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 01:30:41 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/60] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 01:30:41 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/61] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 01:32:00 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/62] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 01:32:00 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/63] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 01:32:01 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/64] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 01:32:01 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/65] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 01:32:01 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/66] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 01:32:01 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/67] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:35:17 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/68] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:35:17 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/69] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:35:18 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/70] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:35:18 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/71] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:35:18 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/72] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:35:18 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/73] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:36:44 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/74] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:36:44 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/75] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:36:45 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/76] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:36:45 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/77] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:36:45 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/78] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:36:45 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/79] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:36:45 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/80] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:36:45 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/81] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:36:45 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/82] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:36:45 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/83] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:36:47 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/84] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:36:47 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/85] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:36:47 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/86] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:36:47 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/87] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:36:48 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/88] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:36:48 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/89] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:36:48 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/90] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:36:48 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/91] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:38:51 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/92] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:38:51 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/93] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:38:51 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/94] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:38:51 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/95] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:38:51 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/96] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:38:52 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/97] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:38:52 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/98] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:38:52 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/99] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:38:52 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/100] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:38:52 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/101] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:38:52 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/102] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:38:52 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/103] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:38:52 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/104] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:38:52 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/105] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:38:52 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/106] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:38:52 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/107] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:06 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/108] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:06 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/109] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:07 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/110] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:07 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/111] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:07 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/112] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:07 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/113] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:07 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/114] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:07 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/115] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:07 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/116] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:07 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/117] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:07 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/118] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:07 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/119] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:07 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/120] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:07 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/121] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:08 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/122] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:08 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/123] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:08 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/124] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:08 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/125] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:08 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/126] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:08 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/127] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:08 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/128] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:08 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/129] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:08 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/130] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:08 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/131] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:08 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/132] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:08 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/133] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:13 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/134] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:13 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/135] 10.0.2.2 () {60 vars in 1079 bytes} [Fri Sep 10 01:39:15 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/136] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:15 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/137] 10.0.2.2 () {60 vars in 1079 bytes} [Fri Sep 10 01:39:16 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/138] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:16 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/139] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:17 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/140] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:17 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/141] 10.0.2.2 () {60 vars in 1079 bytes} [Fri Sep 10 01:39:26 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/142] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:26 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/143] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/144] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:27 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/145] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/146] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:27 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/147] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/148] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:27 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/149] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:33 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/150] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:33 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/151] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:34 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/152] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:34 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/153] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:34 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/154] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:34 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/155] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:34 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/156] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:34 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/157] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:34 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/158] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:34 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/159] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 01:39:34 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2554|app: -1|req: -1/160] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 01:39:35 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.19.1 (64bit) on [Fri Sep 10 11:34:36 2021] ***
+compiled with version: 9.3.0 on 04 September 2021 04:37:50
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /home/an/.local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x559f2fbf42b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+*** Starting uWSGI 2.0.18-debian (64bit) on [Fri Sep 10 11:34:44 2021] ***
+compiled with version: 10.0.1 20200405 (experimental) [master revision 0be9efad938:fcb98e4978a:705510a708d3642c9c962beb663c476167e4e8a4] on 11 April 2020 11:15:55
+os: Linux-5.11.0-27-generic #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5560d36a01b0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-10 11:34:44.589417: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-10 11:34:44.589505: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-10 11:34:45.601693: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-10 11:34:45.601792: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-10 11:34:46.103377: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-10 11:34:46.103419: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-10 11:34:46.103436: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-10 11:34:46.103612: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 15374, cores: 1)
+2021-09-10 11:35:10.958708: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-10 11:35:10.958784: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-10 11:35:10.958807: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-10 11:35:10.959358: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 15357, cores: 1)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/1] 10.0.2.2 () {56 vars in 1027 bytes} [Fri Sep 10 16:33:46 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/2] 10.0.2.2 () {54 vars in 962 bytes} [Fri Sep 10 16:33:46 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/3] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:33:49 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/4] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:33:49 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/5] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:33:49 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/6] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:33:49 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/7] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:34:02 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/8] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:34:02 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/9] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:34:03 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/10] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:34:03 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/11] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:34:03 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/12] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:34:03 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/13] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:34:03 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/14] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:34:03 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/15] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:34:03 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/16] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:34:03 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/17] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:34:03 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/18] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:34:03 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/19] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:34:04 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/20] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:34:04 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/21] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:34:04 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/22] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:34:04 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/23] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:35:53 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/24] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:35:53 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/25] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:35:54 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/26] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:35:54 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/27] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:35:55 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/28] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:35:55 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/29] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:35:55 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/30] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:35:55 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/31] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:35:56 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/32] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:35:56 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/33] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:36:04 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/34] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:36:04 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/35] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:36:05 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/36] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:36:05 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/37] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:36:05 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/38] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:36:05 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/39] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:36:05 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/40] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:36:05 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/41] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:36:05 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/42] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:36:05 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/43] 10.0.2.2 () {58 vars in 1058 bytes} [Fri Sep 10 16:36:05 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/44] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:36:06 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/45] 10.0.2.2 () {60 vars in 1080 bytes} [Fri Sep 10 16:36:07 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/46] 10.0.2.2 () {58 vars in 1015 bytes} [Fri Sep 10 16:36:07 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/47] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:21 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/48] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:21 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/49] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:21 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/50] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:21 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/51] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:21 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/52] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:21 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/53] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:22 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/54] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:22 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/55] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:22 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/56] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:22 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/57] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:22 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/58] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:22 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/59] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:22 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/60] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:22 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/61] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:22 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/62] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:22 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/63] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:22 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/64] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:22 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/65] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:23 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/66] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:23 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/67] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:23 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/68] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:23 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/69] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:23 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/70] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:23 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/71] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:23 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/72] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:23 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/73] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:24 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/74] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:24 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/75] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:24 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/76] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:24 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/77] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:24 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/78] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:24 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/79] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:24 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/80] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:24 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/81] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:25 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/82] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:25 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/83] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:25 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/84] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:25 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/85] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:25 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/86] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:25 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/87] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:25 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/88] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:25 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/89] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:25 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/90] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:25 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/91] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:26 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/92] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:26 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/93] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:26 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/94] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:26 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/95] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:26 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/96] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:26 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/97] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:26 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/98] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:26 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/99] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:26 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/100] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:26 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/101] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/102] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:27 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/103] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/104] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:27 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/105] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/106] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:27 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/107] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/108] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:27 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/109] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:27 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/110] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:28 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/111] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:28 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/112] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:28 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/113] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:28 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/114] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:28 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/115] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:28 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/116] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:28 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/117] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:28 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/118] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:28 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/119] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:29 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/120] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:29 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/121] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:29 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/122] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:29 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/123] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:29 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/124] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:29 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/125] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:29 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/126] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:29 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/127] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:36:29 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/128] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:36:29 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/129] 10.0.2.2 () {56 vars in 1026 bytes} [Fri Sep 10 16:36:34 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/130] 10.0.2.2 () {54 vars in 961 bytes} [Fri Sep 10 16:36:34 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/131] 10.0.2.2 () {56 vars in 1026 bytes} [Fri Sep 10 16:36:37 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/132] 10.0.2.2 () {54 vars in 961 bytes} [Fri Sep 10 16:36:37 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/133] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:37:13 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/134] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:37:13 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/135] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:37:13 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/136] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:37:13 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/137] 10.0.2.2 () {58 vars in 1057 bytes} [Fri Sep 10 16:37:47 2021] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 15374|app: -1|req: -1/138] 10.0.2.2 () {58 vars in 1014 bytes} [Fri Sep 10 16:37:47 2021] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18-debian (64bit) on [Sun Sep 12 23:46:19 2021] ***
+compiled with version: 10.0.1 20200405 (experimental) [master revision 0be9efad938:fcb98e4978a:705510a708d3642c9c962beb663c476167e4e8a4] on 11 April 2020 11:15:55
+os: Linux-5.11.0-34-generic #36~20.04.1-Ubuntu SMP Fri Aug 27 08:06:32 UTC 2021
+nodename: an-VirtualBox
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/an/dev/python/Server
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31605
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/an/dev/python/Server/test.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.8.10 (default, Jun  2 2021, 10:49:15)  [GCC 9.4.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55d9d9b541b0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+2021-09-12 23:46:29.728466: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-09-12 23:46:29.728497: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-09-12 23:46:55.238513: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-09-12 23:46:55.238547: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2021-09-12 23:46:55.238560: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (an-VirtualBox): /proc/driver/nvidia/version does not exist
+2021-09-12 23:46:55.238797: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 2122, cores: 1)

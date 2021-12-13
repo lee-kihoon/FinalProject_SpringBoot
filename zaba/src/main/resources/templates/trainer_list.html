@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<head>
+<html xmlns:th="http://www.thymeleaf.org">
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>ZA.BA</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" th:href="@{course/css/bootstrap.css}" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link th:href="@{course/css/style.css}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link th:href="@{course/css/responsive.css}" rel="stylesheet" />
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" th:href="@{img/favicon.ico}" type="image/x-icon">
+<link rel="apple-touch-icon" th:href="@{img/apple-touch-icon.png}">
+<link rel="apple-touch-icon" sizes="72x72" th:href="@{img/apple-touch-icon-72x72.png}">
+<link rel="apple-touch-icon" sizes="114x114" th:href="@{img/apple-touch-icon-114x114.png}">
+
+<!-- Bootstrap -->
+
+<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome/css/font-awesome.css}">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+
+
+
+
+
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" th:href="@{images/icons/favicon.ico}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/bootstrap/css/bootstrap.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/animate/animate.css}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/css-hamburgers/hamburgers.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/select2/select2.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/main.css}">
+<!--===============================================================================================-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css"  th:href="@{css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome/css/font-awesome.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/nivo-lightbox.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/default.css}">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700}" rel="stylesheet">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Montserrat:400,700}" rel="stylesheet">
+
+
+
+</head>
+
+<html>
+	<head>
+        <script type="text/javascript">
+            function isEnterRoom(){
+                let code = document.getElementById("roomcodeText").value;
+                
+                let ttime = document.getElementById(code).value;
+                alert(ttime);
+
+                location.href = code;
+
+            }
+        </script>
+	</head>
+
+
+<nav>
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">    
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand page-scroll" href="/index2">ZA.BA</a>
+            <div class="phone"><span>Team</span>054-000-0000</div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- 여기서부터 안에 내용 -->
+<div class="container-login100">
+<section class="event_section layout_padding">
+    <div class="container">
+
+      <span class="login100-form-title-white">	
+			  <div style="margin-top:80px"><h2>트레이너의 더 많은 강의를 찾아보세요.</h2></div>
+		  </span>
+
+      <!-- 트레이너 게시판쓰기 -->
+      
+        <a th:if="${session.member.UserType==1}">
+          <div>
+            <div id="OK"  class="container-login100-form-btn">
+              <a class="login100-form-btn" href="writeView" text="글 쓰기">방 생성하기</a>
+            </div>
+          </div>
+      </a>
+      
+      <form method="post" th:action="@{/trainerURL}">
+        <div class="event_container">
+          <tr th:each="list : ${list}">
+            <div th:id="${list.roomcode}+'asdf'" class="box">
+              
+
+              <!-- 제목 및 내용 -->
+              <div  class="img-box">
+                
+                <td th:text="${list.title}">12</td><br>
+                <td th:text="${list.content}">12</td>
+              </div>
+
+              <!-- 내용 -->  
+              <div  class="detail-box">
+                <h4>
+                  시작시간
+                </h4>
+                <h6>
+                  <input style="display:none;" type="text" th:id="${list.roomcode}" th:value="${list.tdate}" ></span>
+                  <td th:text="${list.tdate}">12</td>
+                </h6>
+              </div>
+
+              <!-- 트레이너 이름 -->
+              <div class="date-box">
+                <h3>
+                    <span>
+                      <td th:text="${list.writer}">12</td><br><br>
+                        <a th:href="@{${list.roomcode}}">
+                          <a th:href="@{'/trainerURL?roomcode='+${list.roomcode}+'&tdate='+${list.tdate}}">이동하기</a>
+                        </a>
+                    </span>
+                </h3>
+              </div>
+
+             
+              
+
+            </div>
+          </tr>
+        </div>
+      </form>
+    </div>
+  </section>
+    </div>
+
+	</body>
+
+</html>

@@ -1,0 +1,15 @@
+[uwsgi]
+
+module = app
+callable = wsgi
+
+socket = /home/an/dev/python/Server/test.sock
+chmod-socket = 666
+vacuum = true
+
+daemonize = /home/an/dev/python/Server/uwsgi.log
+
+die-on-term = true
+
+venv = /opt/anaconda/b/
+plugins = python3

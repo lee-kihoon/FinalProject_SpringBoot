@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" th:href="@{images/icons/favicon.ico}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/bootstrap/css/bootstrap.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome-4.7.0/css/font-awesome.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/animate/animate.css}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/css-hamburgers/hamburgers.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{vendor/select2/select2.min.css}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" th:href="@{css/util.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/main.css}">
+<!--===============================================================================================-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+	<link rel="stylesheet" type="text/css"  th:href="@{css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{fonts/font-awesome/css/font-awesome.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/nivo-lightbox.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/nivo-lightbox/default.css}">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700}" rel="stylesheet">
+	<link th:href="@{https://fonts.googleapis.com/css?family=Montserrat:400,700}" rel="stylesheet">
+
+
+</head>
+<script type="text/javascript">
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		var check = 0;
+		var pwCheck =0;
+		const regex = /^[a-zA-Z1-9]{6,12}$/g;		// 아이디 정규 표현식
+		function fn_idChk(){						// 아이디 중복검사 alert
+			$.ajax({
+				url : "/idCheck",
+				type : "post",
+				dataType : "json",
+				data : {"UserId" : $("#UserId").val()},
+				success : function(data){
+					if(data == 1){
+						alert("중복된 아이디입니다.");
+						check = 0;
+					}else if(data == 0){
+						$("#idChk").attr("value", "Y");
+						if(regex.test(document.getElementById('UserId').value)){
+							alert("사용 가능한 아이디 입니다.");
+							document.getElementById('UserId').readOnly = true; 
+							check = 1;
+						}else{
+							alert("아이디는 6~12자리 영문숫자로 이루어 집니다.");
+						}	
+					}
+				}
+			})
+		}
+
+
+	window.onload = function(){								
+		//제출 버튼 클릭시
+		document.getElementById('btn').onclick = function(){
+			if(check==1){
+				var obj_length = document.getElementsByName("UserType").length;
+				var temp;	// radio 박스 변수를 담을 통
+        		for (var i=0; i<obj_length; i++) {
+            		if (document.getElementsByName("UserType")[i].checked == true) {
+                		temp=document.getElementsByName("UserType")[i].value;
+            		}
+        		}
+				if(document.getElementById('Password').value.length>12 || document.getElementById('Password').value.length<6){
+					alert("비밀번호를 올바르게 입력해 주세요.");
+				}else if(document.getElementById('Name').value.length<2){
+					alert("이름은 2자리 이상입니다.");
+				}else if(document.getElementById('Birth').value.length != 10){
+					alert("생일의 입력형식을 확인해 주세요.");
+				}else if(document.getElementById('Phone').value.length != 13){
+					alert("휴대전화의 입력형식을 확인해 주세요.");
+				}else if(document.getElementById('Height').value.length < 1){
+					alert("키를 입력해 주세요.");
+				}else if(document.getElementById('Weight').value.length < 1){
+					alert("몸무게를 입력해 주세요.");
+				}else if(temp==1){
+					alert("트레이너 회원가입으로 진행됩니다.");
+					document.getElementById('trainerInfo').style.display="block";
+					document.getElementById('information').submit();
+					// 여기에 로직을 추가하면 될듯
+				}else{
+					alert("회원가입이 완료 되었습니다.");
+					document.getElementById('information').submit();
+				}
+				
+				
+			}
+			else{
+				check=0;
+				alert("아이디 중복확인을 해주세요.");
+			}
+		};
+
+		document.getElementById('next').onclick = function(){
+			$("#UUserId").hide();
+			$("#PPassword").hide();
+			$("#NName").hide();
+			$("#NNext").hide();
+			$("#BBirth").fadeIn();
+			$("#PPhone").fadeIn();
+			$("#HHeight").fadeIn();
+			$("#WWeight").fadeIn();
+			$("#TType").fadeIn();
+			$("#OK").fadeIn();
+			
+		}
+
+	};
+
+
+// 숫자만 입력, 몸무게, 키
+$(document).on("keyup", "input[numberOnly]", function() {$(this).val( $(this).val().replace(/[^0-9]/gi,"") );}) 
+
+// 전화번호만 입력
+$(document).on("keyup", "input[telOnly]", function() {$(this).val( $(this).val().replace(/[^0-9-]/gi,"") );})
+
+// 생일만 입력
+$(document).on("keyup", "input[birthOnly]", function() {$(this).val( $(this).val().replace(/[^0-9/]/gi,"") );})
+
+// 특수문자 쉼표를 제외 제한
+$(document).on("keyup", "input[commasOnly]", function() {$(this).val( $(this).val().replace(/[<>(){}[\]\-_=+|\/\\'\;.:\"`~!?@#$%^&*]/gi,"") );})
+
+// 한글 영문 숫자
+$(document).on("keyup", "input[noSpecial]", function() {$(this).val( $(this).val().replace(/[^ㄱ-힣a-zA-Z0-9]/gi,"") );})
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+</script>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- nav 바 -->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="/index2">ZA.BA</a>
+      
+      <div class="phone"><span>Team</span>054-000-0000</div>
+    </div>
+  </div>
+</nav>
+
+
+	<!-- 메인화면 -->
+	<div class="limiter">
+		<div class="container-login100">
+			<div style="margin-top:200px; margin-bottom:200px;" class="wrap-login101">
+				<span class="login100-form-title">
+						회원가입
+					</span>
+				<div class="login100-pic js-tilt" data-tilt>
+					
+					<a href="/"><img th:src="@{images/mpg1.gif}" alt="IMG"></a>
+
+				</div>
+
+				<form id="information" class="login100-form validate-form" th:object="${vo}" th:action="@{regist}" method="post">
+					
+					<!-- 아이디 -->
+					<div style="margin-top:50px;" id="UUserId" class="wrap-input100 validate-input">
+						
+						<input class="input100" type="text" name="UserId" id="UserId" th:field="*{UserId}" placeholder="아이디를 입력하세요." noSpecial >
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						ID :
+						</span>
+						<span style="float:right;" class="symbol-input102">
+							<button  class="login100-form-btn-duplicate" type="button" id="idChk" onclick="fn_idChk();" value="N">확인</button>
+						</span>
+						
+					</div>
+
+					<!-- 패스워드 -->
+					<div id="PPassword" style="margin-top:20px;" class="wrap-input100 validate-input">
+						<input class="input100" type="password" name="Password" id="Password" placeholder="비밀번호를 입력하세요." noSpecial>
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						PW :
+						</span>
+					</div>
+					<!-- <span style="font-size:0.9em;" class="error" th:if="${#fields.hasErrors('Password')}" th:errors="*{password}"></span> -->
+
+					<!-- 이름 -->
+					<div id="NName" style="margin-top:20px;" class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="Name" id="Name" placeholder="이름을 입력하세요." noSpecial>
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						이름 :
+						</span>
+					</div>
+					<!-- <span style="margin-left:80px; font-size:0.9em;" class="error" th:if="${#fields.hasErrors('Name')}" th:errors="*{Name}"></span> -->
+					
+					<!-- 다음 -->
+					<div id="NNext" class="container-login100-form-btn">
+						<input class="login100-form-btn" type="button" id="next" value="다음" onclick="next()">
+					</div>
+
+					<!-- 생일 -->
+					<div id="BBirth" style="margin-top:20px; display:none;" class="wrap-input100 validate-input">
+						<input class="input100" type="date" name="Birth" id="Birth" placeholder="ex. 2000/01/01" birthOnly>
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						생일 :
+						</span>
+					</div>
+					<!-- <span style="margin-left:80px; font-size:0.9em;" class="error" th:if="${#fields.hasErrors('Birth')}" th:errors="*{Birth}"></span> -->
+
+					<!-- 전화번호 -->
+					<div id="PPhone" style="margin-top:20px; display:none;" class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="Phone" id="Phone" placeholder="ex. 000-0000-0000" telOnly>
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						전화 :
+						</span>
+					</div>
+					<!-- <span style="font-size:0.9em;" class="error" th:if="${#fields.hasErrors('Phone')}" th:errors="*{Phone}"></span> -->
+					
+					<!-- 키 -->
+					<div id="HHeight" style="margin-top:20px; display:none;" class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="Height" id="Height" placeholder="키를 입력하세요." numberOnly>
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						　키 :
+						</span>
+					</div>
+					<!-- <span style="font-size:0.9em;" class="error" th:if="${#fields.hasErrors('Height')}" th:errors="*{Height}"></span> -->
+
+					<!-- 몸무게 -->
+					<div id="WWeight" style="margin-top:20px; display:none;" class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="Weight" id="Weight" placeholder="체중을 입력하세요." numberOnly>
+						<span class="focus-input100"></span>
+						<span class="symbol-input101">
+						체중 :
+						</span>
+					</div>
+					<!-- <span style=" font-size:0.9em;" class="error" th:if="${#fields.hasErrors('Weight')}" th:errors="*{Weight}" ></span> -->
+
+					<!-- 구분 -->
+					<div id="TType" style="margin-top:20px; display:none;" class="wrap-input100 validate-input">
+						<input style="margin-left:40px" type="radio" name="UserType" id="UserType" value="0" >일반회원
+						<input style="margin-left:40px" type="radio" name="UserType" id="UserType" value="2" >트레이너
+					</div>	
+
+					<!--트레이너일 경우에-->
+					<div id="trainerInfo" style="display:none; margin-top:20px; " class="container-login100-form-btn">
+							<!-- <input class="login100-form-btn-purple" type="button" id="createCode" value="방 생성하기" onclick="httpCode()"> -->
+						<input class="login100-form-btn-purple" type="text"  id="openModalPop" value="트레이너 정보 입력">
+					</div>
+
+					<!-- 제출 -->
+					<div id="OK" style="margin-top:20px;  display:none;" class="container-login100-form-btn">
+						<input class="login100-form-btn" type="button" id="btn" value="제출">
+					</div>
+
+					
+				
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->	
+	<script th:src="@{resources/vendor/jquery/jquery-3.2.1.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/bootstrap/js/popper.js}"></script>
+	<script th:src="@{resources/vendor/bootstrap/js/bootstrap.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/select2/select2.min.js}"></script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/vendor/tilt/tilt.jquery.min.js}"></script>
+	<script th:src="@{resources/js/validation.js}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script th:src="@{resources/js/main.js}"></script>
+
+</body>
+</html>

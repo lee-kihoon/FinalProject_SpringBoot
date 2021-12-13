@@ -1,0 +1,12 @@
+[uwsgi]
+
+module = app
+callable = app
+
+socket = /home/an/dev/python/Server/test.sock
+chmod-socket = 666
+vacumn = true
+
+daemonize = /home/an/dev/python/Server/uwsgi.log
+
+die-on-term = true

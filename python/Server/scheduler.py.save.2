@@ -1,0 +1,51 @@
+import schedule # 스케줄러 라이브러리
+import pymysql
+import time
+import datetime
+import sys
+
+# 스케줄러가 수행할 함수
+def schedulerJob():
+    
+    time1  = str(datetime.datetime.now())
+    print(time1 + ' >> Scheduler Start')
+
+    conn = pymysql.connect(
+        user = 'zaba',
+        passwd = '0000',
+        host = '211.253.100.186',
+        port = 8081,
+        db = 'health',
+        charset = 'utf8'
+)
+
+    sql = "INSERT INTO count_table_bak (date,user_name,squat,plank,pushup,lunge,situp) SELECT CURDATE(), user_name, count(case when squat=1 then 1 end) as squat,count(case when plank=1 then 1 end) as plank, count(case when pushup=1 then 1 end) as pushup, count(case when lunge=1 then 1 end) as lunge, count(case when situp=1 then 1 end) as situp FROM count_table GROUP BY user_name"
+    sql2 = "DELETE FROM count_table"
+
+    squat_insert = "INSERT INTO count_table(user_name, squat, plank, pushup, lunge, situp) values(%s, 1, 0, 0, 0, 0)"
+    plank_insert = "INSERT INTO count_table(user_name, squat, plank, pushup, lunge, situp) values(%s, 0, 1, 0, 0, 0)"
+    pushup_insert = "INSERT INTO count_table(user_name, squat, plank, pushup, lunge, situp) values(%s, 0, 0, 1, 0, 0)"
+    lunge_insert = "INSERT INTO count_table(user_name, squat, plank, pushup, lunge, situp) values(%s, 0, 0, 1, 0, 0)"
+    situp_insert = ""
+
+
+    #sql2 = "DELETE FROM test" # 테스트용
+
+    curs = conn.cursor()
+    curs.execute(sql)
+    curs.execute(sql2)
+    conn.commit()
+    time.sleep(0.5)
+    conn.close()
+
+    time2 = str(datetime.datetime.now())
+    print(time2 + ' >> Scheduler End')
+    print('===============================')
+
+#매일 특정시간에 동작(23:55)
+schedule.every().day.at("23:55").do(schedulerJob)
+
+print('========== Scheduler ==========')
+while True :
+    schedule.run_pending()
+    time.sleep(1)
