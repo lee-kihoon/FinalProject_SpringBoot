@@ -10,12 +10,12 @@
  
 ## 시연 영상 링크
 
-1. 서비스  -  https://youtu.be/G40ThETazsk
-2. 대시보드  -  https://youtu.be/GjyRyMhT6oQ
-3. 트레이너인증  -  https://youtu.be/gLuK0BR-Yfg
-4. 스쿼트 시연  -  https://youtu.be/oBK45VmUOoA
-5. 플랭크 시연  -  https://youtu.be/hppbg2swK8c
-6. 런지 시연  -  https://youtu.be/s9f7PsMZHMw
+1. 서비스  -  https://youtu.be/vjiL442oT6E
+2. 대시보드  -  https://youtu.be/NNBQe68TLvw
+3. 트레이너인증  -  https://youtu.be/FaXiZP8foJg
+4. 스쿼트 시연  -  https://youtu.be/-1QH66SbU7w
+5. 플랭크 시연  -  https://youtu.be/DgWMgzfRadc
+6. 런지 시연  -  https://youtu.be/nxcNumjroAc
 
 #
 
