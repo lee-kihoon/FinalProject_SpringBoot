@@ -8,10 +8,8 @@
 자바 : 자세를 바르게
  
 ## 협업
-트렐로
-https://trello.com/b/vAAbDOo3/%EC%9E%90%EB%B0%94
-구글 스프레드 시트
-https://docs.google.com/spreadsheets/d/1qyZuFDWacsW1Cszh1qQmr6-2q3Am3gYV3V7vJImhcXA/edit#gid=0
+- 트렐로 - https://trello.com/b/vAAbDOo3/%EC%9E%90%EB%B0%94
+- 구글 스프레드 시트 - https://docs.google.com/spreadsheets/d/1qyZuFDWacsW1Cszh1qQmr6-2q3Am3gYV3V7vJImhcXA/edit#gid=0
  
 ## 시연 영상 링크
 
