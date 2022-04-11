@@ -7,10 +7,6 @@
 # ZA.BA 
 자바 : 자세를 바르게
  
-## 협업
-- 트렐로 - https://trello.com/b/vAAbDOo3/%EC%9E%90%EB%B0%94
-- 구글 스프레드 시트 - https://docs.google.com/spreadsheets/d/1qyZuFDWacsW1Cszh1qQmr6-2q3Am3gYV3V7vJImhcXA/edit#gid=0
- 
 ## 시연 영상 링크
 
 1. 서비스  -  https://youtu.be/vjiL442oT6E
@@ -61,6 +57,9 @@
 
 - 일정 : 구글 스프레드시트, 트렐로 등을 활용한 의사소통 및 협업 수행
 
+- 트렐로 - https://trello.com/b/vAAbDOo3/%EC%9E%90%EB%B0%94
+- 구글 스프레드 시트 - https://docs.google.com/spreadsheets/d/1qyZuFDWacsW1Cszh1qQmr6-2q3Am3gYV3V7vJImhcXA/edit#gid=0
+ 
 ![image](https://user-images.githubusercontent.com/62547169/138979400-aa1f8aee-5e9d-4ebb-94fc-c9a055483f1c.png)
 
 #
